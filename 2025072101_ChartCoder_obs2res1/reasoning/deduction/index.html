@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>deduction</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>deduction</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "deduction": 4</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">138.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which chart includes the label &#x27;Vibration&#x27;, given that both charts have the same x-axis labels?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Both charts&quot;,
+  &quot;Prediction&quot;: &quot;Both&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that may cause the model&#x27;s error include:
+
+1. **Similarity in X-Axis Labels**: Both charts use identical x-axis labels (&#x27;Temperature&#x27;, &#x27;Humidity&#x27;, &#x27;Vibration&#x27;), which might make it difficult for the model to distinguish between them based solely on these labels.
+  
+2. **Overlapping Legend Positions**: The legends are positioned outside the main plotting area, and if the model has trouble parsing external elements or associates them incorrectly with the charts, it could lead to confusion.
+
+3. **Inconsistent Y-Axis Scales**: The y-axis scales differ between the grouped and stacked charts. This might mislead the model into focusing on the scale rather than the content of the labels.
+
+4. **Bar Heights and Color Coding**: The heights of bars for &#x27;Vibration&#x27; are significantly smaller compared to &#x27;Temperature&#x27; and &#x27;Humidity&#x27;. If the model relies heavily on visual prominence, it might overlook the &#x27;Vibration&#x27; label due to its less noticeable presence.
+
+### Most Relevant Pitfall
+
+The most relevant pitfall leading to the model&#x27;s error is likely related to the **overlapping x-axis labels** across both charts. Given that the model’s prediction was &quot;Both,&quot; it suggests that the model correctly identified &#x27;Vibration&#x27; as a common label but failed to differentiate the context or presentation form of the charts adequately.
+
+&lt;most_relevant&gt;Overlapping x-axis labels&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Overlapping x-axis labels</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">138.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which chart has a title related to cumulative values?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Stacked bar chart&quot;,
+  &quot;Prediction&quot;: &quot;Stacked&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could cause the model&#x27;s error include:
+
+1. **Incomplete Title Recognition**: The model may fail to fully recognize or interpret the full titles on the charts, leading it to only identify &quot;Stacked&quot; instead of &quot;Stacked Sensor Readings.&quot;
+
+2. **Similarity in Chart Types**: Both the grouped and stacked bar charts use similar visual elements (bars and colors), which might confuse the model if it relies too heavily on visual patterns without textual context.
+
+3. **Text Clarity and Positioning**: The title text might be positioned or formatted in a way that makes it difficult for the model to accurately capture and interpret the complete title.
+
+4. **Lack of Explicit Mention of &quot;Cumulative&quot;**: The word &quot;cumulative&quot; appears only in the y-axis label (&quot;Cumulative Value&quot;) of the stacked chart, not in the title itself. This can mislead the model if it expects the term &quot;cumulative&quot; to appear explicitly in the title.
+
+### Most Relevant Pitfall
+
+The most relevant pitfall to this error is the **lack of explicit mention of &quot;cumulative&quot;** in the title of the stacked chart. While the y-axis label specifies &quot;Cumulative Value,&quot; the title does not directly indicate this, leading the model to rely solely on the term &quot;Stacked&quot; without understanding its relation to cumulative values.
+
+&lt;most_relevant&gt;Lack of explicit mention of &quot;cumulative&quot; in the title of the stacked chart.&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Lack of explicit mention of &quot;cumulative&quot; in the title of the stacked chart.</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">256.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">What does the marker indicate for Subgraph 1?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;^&quot;,
+  &quot;Prediction&quot;: &quot;Values&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Identification of Potential Pitfalls:
+
+1. **Legend Overlap or Confusion**:
+   - The legend in both subgraphs shows the label &quot;Values&quot; but does not explicitly show the markers (^ for Subgraph 1 and o for Subgraph 2). This could lead to confusion about which marker corresponds to which subgraph.
+
+2. **Marker Representation in Legend**:
+   - While the markers are visible on the lines in the graph, they are not clearly represented in the legend. The legend only shows the color and the word &quot;Values,&quot; omitting the marker shape.
+
+3. **Color Similarity Between Elements**:
+   - In Subgraph 1, the color of the line, the marker, and the shaded area are all very similar, which might make it harder to distinguish the specific role of the marker.
+
+4. **Lack of Explicit Marker Information**:
+   - There is no direct textual indication within the chart that specifies what the marker symbol represents. The user has to rely solely on visual inspection.
+
+---
+
+### Most Relevant Pitfall:
+The most significant pitfall causing the model&#x27;s error is the lack of explicit representation of the marker in the legend. Since the legend only includes the text &quot;Values&quot; without indicating the marker type, the model likely confused the label &quot;Values&quot; with the actual marker.
+
+Thus, the most relevant pitfall is:  
+&lt;most_relevant&gt;Legend does not explicitly show the marker type (^).&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Legend does not explicitly show the marker type (^).</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">256.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000003_column2.png" alt="row000003_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">What does the y-axis label &#x27;Values&#x27; indicate about the shared measurement across both subgraphs?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Values&quot;,
+  &quot;Prediction&quot;: &quot;Scale&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The model&#x27;s error stems from a misinterpretation of what the &#x27;Values&#x27; label on the y-axis signifies. Here are the potential pitfalls and the most relevant one:
+
+### Potential Pitfalls:
+1. **Ambiguity in Labeling**: The term &#x27;Values&#x27; is generic and could be interpreted in various ways depending on context. It might not explicitly convey the specific nature of the measurements being represented.
+
+2. **Lack of Units or Scale Definition**: There are no units or further definitions provided alongside the &#x27;Values&#x27; label, which can lead to confusion about whether it represents a scale, count, score, or some other metric.
+
+3. **Contextual Misalignment**: Without additional context or an explanatory note, the viewer may assume the &#x27;Values&#x27; represent a scale based on the numerical range shown on the axis.
+
+4. **Graphical Consistency Across Subgraphs**: The consistent use of &#x27;Values&#x27; across both subgraphs might have led the model to interpret it as a uniform scale rather than individual data point measurements.
+
+### Most Relevant Pitfall:
+The most relevant pitfall leading to the model&#x27;s error is the **ambiguity in labeling**. The generic term &#x27;Values&#x27; without further clarification could easily be misconstrued as representing a scale, especially if the model lacks contextual understanding of the dataset and the intended meaning behind these values.
+
+&lt;most_relevant&gt;Ambiguity in labeling&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Ambiguity in labeling</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

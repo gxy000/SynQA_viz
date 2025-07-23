@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>prediction</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>prediction</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "prediction": 4</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">30.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">What is the color of the bubble for Region 2?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;#DC143C&quot;,
+  &quot;Prediction&quot;: &quot;Red&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could cause the error include:
+
+1. **Color Representation**: The actual color codes might not be visually distinguishable by name or might appear differently depending on the display settings or color perception.
+
+2. **Color Mapping**: The mapping between regions and their respective colors in the code may not directly translate into intuitive color names like &quot;Red,&quot; which can lead to confusion.
+
+3. **Visual Interpretation**: The visual appearance of the color on the chart may seem close to red but is actually represented by a specific hex code (#DC143C).
+
+The most relevant pitfall to this error is the **visual interpretation** of the color. Even though the color appears red-like, the exact hex code (#DC143C) should be used for precise identification.
+
+&lt;most_relevant&gt;Visual Interpretation&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Visual Interpretation</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">30.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">What is the color of the bubble for Region 3?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;#7FFF00&quot;,
+  &quot;Prediction&quot;: &quot;Green&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image
+
+1. **Color Perception**: The actual hex code `#7FFF00` represents a specific shade of green, which might be perceived differently by individuals or systems interpreting the visual. Some may interpret it simply as &quot;green,&quot; missing the exact shade.
+
+2. **Hex Code vs. Common Color Name**: The ground truth specifies the hex code `#7FFF00`, whereas the model predicts the common name &quot;Green.&quot; This mismatch occurs because hex codes provide precise color definitions while common names can be more ambiguous.
+
+3. **Visual Ambiguity**: If the chart&#x27;s colors are not distinctly different or if there’s a lack of a legend, it could lead to misidentification of colors based on visual inspection alone.
+
+4. **Rendering Differences**: The way colors are rendered can vary across different devices or software, potentially leading to slight variations in how the color is perceived.
+
+### Most Relevant Pitfall
+
+The most relevant pitfall here is the **difference between the precise hex code and the common color name**. While `#7FFF00` is indeed a shade of green, specifying it exactly using the hex code ensures accuracy, whereas &quot;Green&quot; is a broader term that doesn&#x27;t capture the exact shade.
+
+&lt;most_relevant&gt;The difference between the precise hex code (#7FFF00) and the common color name (Green).&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">The difference between the precise hex code (#7FFF00) and the common color name (Green).</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">280.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Comparing chart types. Which type of chart shows the fee categories more clearly?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Pie Chart&quot;,
+  &quot;Prediction&quot;: &quot;Bar&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Bar Chart Clarity**: 
+   - The bar chart displays absolute values, which can make it difficult to immediately grasp the relative proportions between different cost categories. 
+   - The differences in height between bars might not be as intuitive for comparing proportions.
+
+2. **Pie Chart Clarity**:
+   - The pie chart effectively shows the proportion of each category relative to the total, making it easier to visualize how much each category contributes to the overall costs.
+   - The percentages displayed on the pie slices provide clear numerical comparisons.
+
+3. **Visual Perception**:
+   - People generally find it easier to compare angles and areas (as in a pie chart) than to compare heights (as in a bar chart) when trying to understand proportions.
+
+4. **Labeling and Annotations**:
+   - Both charts have appropriate labels and annotations, but the pie chart’s percentage labels make the relative contributions immediately obvious.
+
+5. **Scale and Range**:
+   - The bar chart’s scale might exaggerate the differences due to the large value of &quot;Hardware Costs,&quot; making smaller categories like &quot;Transaction Fees&quot; appear negligible.
+
+### Most Relevant Pitfall:
+
+The primary reason for the model&#x27;s error lies in its interpretation of clarity for comparing proportions. While both charts are informative, the pie chart excels at visually representing the relative size of each cost category compared to the total. This makes it clearer for viewers to quickly understand the distribution of mining costs.
+
+&lt;most_relevant&gt;The most relevant pitfall is the bar chart&#x27;s limitation in clearly showing relative proportions compared to the pie chart, which uses angles and percentages to effectively illustrate the contribution of each category to the total.&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">The most relevant pitfall is the bar chart&#x27;s limitation in clearly showing relative proportions compared to the pie chart, which uses angles and percentages to effectively illustrate the contribution of each category to the total.</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">332.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000003_column2.png" alt="row000003_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">The Total Sales Revenue in Q1 is 45.6 million, and in Q4 it is 52.1 million. The Number of Units Sold in Q1 is 1200 units, and in Q4 it is 1400 units. Predict if the Total Sales Revenue would increase or decrease in Q3 based on the trend from Q1 to Q4.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;The Total Sales Revenue would likely increase in Q3.&quot;,
+  &quot;Prediction&quot;: &quot;To predict the Total Sales Revenue for Q3, let&#x27;s analyze the trend from Q1 to Q4:\n\n1. **Q1 to Q2**: \n   - Sales Revenue increased from 45.6 million to 50.3 million.\n   - Units Sold increased from 1200 to 1300.\n\n2. **Q2 to Q3**:\n   - Sales Revenue decreased from 50.3 million to 47.8 million.\n   - Units Sold decreased from 1300 to 1200.\n\n3. **Q3 to Q4**:\n   - Sales Revenue increased from 47.8 million to 52.1 million.\n   - Units Sold increased from 1200 to 1400.\n\nThe trend shows an initial increase followed by a decrease, then another increase. This suggests a cyclical pattern where sales revenue dips in Q3 before rising again in Q4.\n\nBased on this pattern, we can predict that the Total Sales Revenue in Q3 would decrease.\n\n&lt;decrease&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Identifying Potential Pitfalls
+
+1. **Misinterpretation of Trends**:
+   - The model might be overly focused on the Q1-to-Q4 trend without considering the intermediate Q2-to-Q3 dip. It could assume a continuous increase instead of recognizing the cyclical nature of the data.
+
+2. **Ignoring Cyclical Patterns**:
+   - The model may not account for cyclical patterns in the data. While there is a general upward trend, there’s also a noticeable dip in Q3, which suggests a recurring seasonal or periodic behavior.
+
+3. **Overweighting Initial Data Points**:
+   - The model might place too much emphasis on the Q1-to-Q2 increase and ignore the subsequent decrease in Q3. This could lead to an incorrect prediction that ignores the more recent data trends.
+
+4. **Lack of Contextual Understanding**:
+   - The model might lack contextual understanding about typical business cycles or seasonal variations that could explain why sales revenue decreases in Q3 but increases again in Q4.
+
+### Most Relevant Pitfall
+
+The most relevant pitfall is the **misinterpretation of trends**, specifically the assumption of a continuous increase without accounting for the intermediate dip. The model should have recognized the cyclical pattern indicated by the Q2-to-Q3 decrease and predicted a similar dip in Q3 rather than a continued increase.
+
+&lt;most_relevant&gt;Misinterpretation of trends&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Misinterpretation of trends</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>
