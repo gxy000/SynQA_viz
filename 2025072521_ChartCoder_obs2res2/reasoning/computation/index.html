@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>computation</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>computation</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "computation": 4</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">263.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Is the starting point for the category with value 95 located at the origin?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;True&quot;,
+  &quot;Prediction&quot;: &quot;&lt;No&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Identifying Potential Pitfalls:
+
+1. **Arrow Representation Misinterpretation**:
+   - The arrows might be visually interpreted as starting from different points because of their varying lengths, but all arrows actually originate from the same x-coordinate (0).
+
+2. **Scatter Point Overlap**:
+   - The green scatter points representing the start of each arrow are very close to the y-axis and may not be distinctly visible or noticeable, leading to confusion about their exact position.
+
+3. **Grid Lines and Ticks**:
+   - Grid lines and tick marks can sometimes obscure the visual clarity of the starting points, especially if they are not precisely aligned with the arrows’ origins.
+
+4. **Color Contrast**:
+   - If the colors of the arrows and scatter points do not provide enough contrast against the background, it might lead to misinterpretation of their positions.
+
+5. **Missing Explicit Annotations**:
+   - There is no explicit annotation or marker indicating that all arrows start from the origin, which could make it less obvious to some viewers.
+
+### Most Relevant Pitfall:
+
+The most significant pitfall leading to the model’s incorrect prediction is the **arrow representation misinterpretation**. Since all arrows begin at the same x-coordinate (0), it&#x27;s essential to correctly interpret that regardless of their lengths, they share the same starting point on the x-axis.
+
+Thus, the most relevant pitfall is:  
+&lt;most_relevant&gt;Arrow Representation Misinterpretation&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Arrow Representation Misinterpretation</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">323.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Calculate the median value for Center A.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;550&quot;,
+  &quot;Prediction&quot;: &quot;600&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that may cause the model&#x27;s error include:
+
+1. **Incorrect Marker Identification**: The model might be misinterpreting the markers used for different statistical values (Min, Q1, Median, Q3, Max). If the model does not correctly associate the circle marker with the median, it could lead to incorrect value identification.
+
+2. **Color and Marker Overlap Confusion**: In the case of overlapping or closely positioned markers, especially if they have similar colors, the model might confuse the median marker with another value like Q3 or Q1.
+
+3. **Outlier Influence Misinterpretation**: The presence of outliers can sometimes distract models if they incorrectly associate an outlier with a main statistical value like the median.
+
+4. **Incorrect Legend Reading**: If the model misreads the legend, it might mix up the data corresponding to &quot;Center A&quot; with other centers.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall leading to the model predicting the median value as 600 instead of the correct 550 is likely due to **incorrect marker identification**. Since the median value is represented by a specific marker type, if the model confuses this marker with the one representing Q3 (which has a value of 600 for Center A), it would result in the wrong prediction.
+
+&lt;most_relevant&gt;Incorrect Marker Identification&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Incorrect Marker Identification</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">323.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Rank the centers according to their maximum values from highest to lowest.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Center D, Center C, Center A, Center B&quot;,
+  &quot;Prediction&quot;: &quot;CenterD&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Overlapping Markers**: The markers representing the data points may overlap or be very close, making it difficult to distinguish between them, especially when trying to compare maximum values.
+
+2. **Outliers Representation**: The outliers are marked with an &#x27;X&#x27; symbol, which can be easily overlooked if not explicitly noted. In this case, the outlier for Center D is at 1200, which is higher than its max value of 1050 but is crucial for ranking.
+
+3. **Color and Marker Confusion**: Different colors and markers are used for each distribution center. If the viewer does not pay attention to the legend or the specific markers, they might misinterpret the data.
+
+4. **Grid Lines and Ticks**: Grid lines and ticks on the x-axis help in reading the values, but if they are too dense or not clearly visible, it can lead to incorrect estimations.
+
+5. **Legend Placement**: The legend is placed outside the plot area, which might make it less noticeable. If someone ignores the legend, they might confuse the centers.
+
+---
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall causing the model&#x27;s error is the **overlooking of the outlier for Center D**. The model likely only considered the &#x27;Max&#x27; value for Center D (1050) without accounting for the outlier (1200), leading to an incorrect ranking.
+
+&lt;most_relevant&gt;Overlooking the outlier for Center D&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Overlooking the outlier for Center D</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">980.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000003_column2.png" alt="row000003_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">The performance score for Retail is 50 and for Manufacturing is 65. What is the ratio of Retail&#x27;s score to Manufacturing&#x27;s score?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;0.769&quot;,
+  &quot;Prediction&quot;: &quot;10:13&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could lead to errors include:
+
+1. **Color Mapping Misinterpretation**: The color gradient might not be clearly interpreted by some models, leading to confusion about the actual values represented by the colors.
+
+2. **Scatter Point Size Misinterpretation**: The size of the scatter points varies according to the performance scores, but if not correctly interpreted, it can lead to incorrect assumptions about the data values.
+
+3. **Lack of Explicit Value Labels**: Although the code adds text labels for values near the scatter points, these might not always be visible or clear in the chart image, especially if the resolution is low or there are overlapping elements.
+
+4. **Legend and Color Bar Misalignment**: The legend and color bar are present but may not always be directly linked to the corresponding points on the chart, which can cause misinterpretation.
+
+### Most Relevant Pitfall
+
+The most relevant pitfall to the specific error in question is the **lack of explicit value labels** near the scatter points. In this case, the model likely did not recognize the exact numerical values for Retail and Manufacturing due to the absence of clear labels on the chart image. This led to an incorrect interpretation of the ratio as &quot;10:13&quot; instead of the correct decimal form &quot;0.769&quot;.
+
+&lt;most_relevant&gt;lack of explicit value labels&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">lack of explicit value labels</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

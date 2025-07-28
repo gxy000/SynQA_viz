@@ -1,0 +1,294 @@
+<html>
+<head>
+<title>negation</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>negation</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "negation": 6</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">272.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which one between blue and red is not representing humidity?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Both blue and red&quot;,
+  &quot;Prediction&quot;: &quot;Blue&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Color Misalignment**: The colors in the legend do not match the actual colors of the data in the chart. The legend indicates that blue represents temperature, red represents pressure, and green represents humidity. However, the chart does not clearly show these relationships.
+
+2. **Legend Placement and Clarity**: The legend is placed outside the main plot area, which may make it less noticeable or harder to associate with the corresponding data in the plot.
+
+3. **Data Representation**: The quiver plots for temperature and pressure use the same `u` and `v` values, which might cause confusion. The humidity quiver plot uses `u` and `w`, but the visual difference might not be clear enough.
+
+4. **Color Opacity**: The red quiver plot has an opacity of 0.5, which might make it less visible compared to the blue quiver plot.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall causing the model&#x27;s error is the **misalignment between the legend and the actual colors of the data in the chart**. The legend incorrectly suggests that blue represents temperature and red represents pressure, leading the model to mistakenly conclude that blue represents humidity when in fact neither blue nor red represent humidity.
+
+&lt;most_relevant&gt;Misalignment between the legend and the actual colors of the data in the chart&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Misalignment between the legend and the actual colors of the data in the chart</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">312.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">The &#x27;Max&#x27; quartile value for &#x27;Data Migration&#x27; is 1900, the &#x27;Max&#x27; quartile value for &#x27;Customer Support&#x27; is 1800. Which one is not the largest among them?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;1800&quot;,
+  &quot;Prediction&quot;: &quot;Customer Support&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">To address the issue, let&#x27;s break down the potential pitfalls:
+
+### Potential Pitfalls:
+
+1. **Misinterpretation of Labels**: The model might have misinterpreted the labels or confused the &#x27;Task Type&#x27; names with numerical values. For instance, it could have incorrectly identified &quot;Customer Support&quot; as a numerical value instead of recognizing its associated &#x27;Max&#x27; value.
+
+2. **Numerical Comparison Error**: The model may not have correctly compared the numerical values. It might have compared strings rather than integers, leading to incorrect conclusions about which number is larger.
+
+3. **Attention to Specific Values**: The model might not have focused specifically on the &#x27;Max&#x27; quartile values for &#x27;Data Migration&#x27; (1900) and &#x27;Customer Support&#x27; (1800). Instead, it might have considered other quartile values or overall patterns in the data.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall here is the **numerical comparison error**. The model likely did not correctly compare the numerical values of 1900 and 1800, leading it to incorrectly identify &quot;Customer Support&quot; as the answer instead of recognizing that 1800 is numerically smaller than 1900.
+
+Thus, the response should be:
+
+&lt;most_relevant&gt;Numerical comparison error&lt;most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Numerical comparison error</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">442.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which of the Q3 value for Schools and the Max value for Pipelines is not the median value for any infrastructure?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Neither value is the median for any infrastructure&quot;,
+  &quot;Prediction&quot;: &quot;950&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Color Coding Confusion**: The chart uses different shades of red to represent various quartiles and the maximum values. This could lead to misinterpretation if viewers do not carefully check the legend.
+
+2. **Legend Placement and Clarity**: The legend is located at the top-right corner and may be overlooked or misread, especially if users quickly glance at the chart without fully understanding the color associations.
+
+3. **Outlier Representation**: Outliers are marked with red dots, which can overlap with other data points, causing confusion about their actual values.
+
+4. **Value Readability**: The y-axis has values ranging from 0 to 1600, but the exact numerical values for each category might not be immediately clear due to the overlapping areas and lack of specific data point labels.
+
+### Most Relevant Pitfall to This Error:
+
+The most relevant pitfall leading to the model&#x27;s incorrect prediction is the **confusion caused by the color coding**. Specifically, the model might have mistaken the red color representing Q3 and Max values as the Median values due to the similar red shades used in the chart.
+
+&lt;most_relevant&gt;Color Coding Confusion&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Color Coding Confusion</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">579.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000003_column2.png" alt="row000003_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Evaluate if the label &#x27;Healthcare
+70&#x27; correctly reflects the Healthcare sector&#x27;s value.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;True&quot;,
+  &quot;Prediction&quot;: &quot;&lt;Correct&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could lead to errors include:
+
+1. **Label Overlap or Misplacement**: If labels are overlapping or not placed correctly within their respective segments, it can lead to confusion about which label corresponds to which sector.
+
+2. **Incorrect Size Representation**: If the sizes of the treemap segments do not accurately reflect the values they represent, it can mislead viewers into thinking the values are different.
+
+3. **Color Coding Issues**: If the colors are not distinct enough or if there is no clear legend, it can make it difficult to differentiate between sectors.
+
+4. **Text Formatting Errors**: If the text formatting (like font size, color, or alignment) makes the labels hard to read, it can lead to incorrect interpretations.
+
+In this case, the label &#x27;Healthcare 70&#x27; is clearly visible within the correct segment and the size of the segment appears proportional to its value of 70. Therefore, the label correctly reflects the Healthcare sector&#x27;s value.
+
+The most relevant pitfall leading to the error in the model&#x27;s prediction seems to be related to how the model interprets visual information, possibly due to issues in text recognition or size representation interpretation.
+
+&lt;most_relevant&gt;The most relevant pitfall is likely an issue with the model&#x27;s ability to correctly interpret and validate the visual representation of the treemap, particularly in terms of accurately reading the label &#x27;Healthcare 70&#x27; and confirming it matches the intended value.&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">The most relevant pitfall is likely an issue with the model&#x27;s ability to correctly interpret and validate the visual representation of the treemap, particularly in terms of accurately reading the label &#x27;Healthcare 70&#x27; and confirming it matches the intended value.</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">861.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000004_column2.png" alt="row000004_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Given the colors used in both plots, which color is NOT used in either plot?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;any unused color&quot;,
+  &quot;Prediction&quot;: &quot;Red&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">To identify the pitfalls in the chart image that caused the error:
+
+### Potential Pitfalls:
+1. **Color Perception**: The model might not accurately perceive or distinguish between colors, leading to incorrect identification of red as unused.
+2. **Color Representation**: The legend and actual plot colors may not match perfectly, causing confusion.
+3. **Visual Overlap**: Colors may blend visually, making it difficult to discern individual colors.
+4. **Legend Interpretation**: Misinterpreting the legend could lead to an incorrect conclusion about the colors used.
+
+### Most Relevant Pitfall:
+The most relevant pitfall here is the **color perception** issue. In the provided image, the colors used in the plots are clearly visible, but the model&#x27;s prediction of &quot;Red&quot; indicates a problem with correctly identifying colors. While there are orange-like colors (#FF4500 in the first plot), these are distinct from true red (#FF0000). The model seems to confuse similar shades, leading to the incorrect conclusion.
+
+&lt;most_relevant&gt;color perception&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">color perception</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">957.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000005_column2.png" alt="row000005_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which experiment has a higher Precision, Experiment 2 or Experiment 4?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Experiment 4&quot;,
+  &quot;Prediction&quot;: &quot;Neither&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Bar Overlap and Clarity**: The bars for different metrics (Precision, Recall, F1-Score) are close together, which might make it difficult to distinguish their exact lengths accurately, especially when comparing similar values.
+
+2. **Color Similarity**: The colors chosen for the bars may not have enough contrast, particularly between dark blue and green. This can make it challenging to differentiate the bars visually, leading to confusion.
+
+3. **Grid Lines**: While the grid lines help in estimating the values, they can also introduce visual noise if they are too prominent or closely spaced. This could distract from precise comparison of bar lengths.
+
+4. **Label Placement**: The placement of the category labels (&quot;Experiment 1&quot;, &quot;Experiment 2&quot;, etc.) is clear, but the metric labels (legend) are placed outside the main plot area, which might require viewers to shift their focus back and forth.
+
+5. **Precision Values**: The precision values for Experiment 2 (0.97) and Experiment 4 (0.98) are very close, making it hard to discern the difference by eye alone unless one looks at the actual data or pays very close attention to the bar ends.
+
+### Most Relevant Pitfall to the Error:
+
+The most significant issue contributing to the model&#x27;s incorrect prediction is the **difficulty in visually distinguishing small differences between very close values** due to the proximity and slight overlap of the bars. This makes it challenging to determine that Experiment 4 has a slightly higher Precision than Experiment 2 just by looking at the chart.
+
+&lt;most_relevant&gt;The difficulty in visually distinguishing small differences between very close values due to the proximity and slight overlap of the bars.&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">The difficulty in visually distinguishing small differences between very close values due to the proximity and slight overlap of the bars.</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

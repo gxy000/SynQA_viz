@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>arrangement</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>arrangement</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "arrangement": 2</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">446.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which subplot shows a stacked bar chart?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Second subplot&quot;,
+  &quot;Prediction&quot;: &quot;Right&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could cause this error include:
+
+1. **Misleading Labels**: The title of the second subplot is &quot;AI Applications Detail,&quot; which might not immediately indicate that it&#x27;s a stacked bar chart unless one closely examines the visual structure of the bars.
+
+2. **Visual Complexity**: The stacked bar chart in the second subplot has multiple segments, making it visually more complex than the simple bar chart in the first subplot. This complexity might be overlooked if the viewer does not pay close attention.
+
+3. **Color Coding**: While the colors in the stacked bar chart help differentiate the segments, the legend is placed outside the plot area, which might make it less noticeable.
+
+4. **Grid Lines**: The first subplot has grid lines, which can draw more immediate attention compared to the second subplot, where grid lines are absent.
+
+The most relevant pitfall to this error is the **misleading labels** because the title &quot;AI Applications Detail&quot; does not explicitly convey that it is a stacked bar chart, leading the model to misinterpret the visual information.
+
+&lt;most_relevant&gt;Misleading Labels&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Misleading Labels</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">456.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Arrange the labels RADAR and Camera in descending order of their sizes.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;RADAR, Camera&quot;,
+  &quot;Prediction&quot;: &quot;RADAR&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could cause the error include:
+
+1. **Label Overlap or Misalignment**: If the labels &quot;RADAR&quot; and &quot;Camera&quot; are too close or partially overlapping, it might lead to confusion about which label corresponds to which slice.
+   
+2. **Color Similarity**: If the colors assigned to &quot;RADAR&quot; and &quot;Camera&quot; are very similar, it can make it difficult to distinguish between them visually.
+
+3. **Incorrect Legend Placement**: If the legend is not clearly aligned with the corresponding slices, it may cause misinterpretation of which label belongs to which data size.
+
+4. **Incorrect Size Representation**: If the visual size representation does not accurately reflect the numerical values, it can lead to incorrect ordering based on visual inspection.
+
+The most relevant pitfall to the error where the model only predicted &quot;RADAR&quot; instead of &quot;RADAR, Camera&quot; is likely due to an issue with the **incorrect size representation**. Since the numerical sizes for &quot;RADAR&quot; (5000) and &quot;Camera&quot; (4000) differ significantly, if the visual sizes do not match these proportions, it can mislead the model into thinking only one of them should be considered larger.
+
+&lt;most_relevant&gt;Incorrect Size Representation&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Incorrect Size Representation</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

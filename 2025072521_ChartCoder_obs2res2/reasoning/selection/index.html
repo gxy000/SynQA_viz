@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>selection</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>selection</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "selection": 3</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">160.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">The color of the line is green, and the style of the line is dotted. Which one comes first alphabetically?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;color&quot;,
+  &quot;Prediction&quot;: &quot;dotted&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could cause the error include:
+
+1. **Line Style and Color Representation**: The chart visually shows both the line color and style clearly but does not explicitly label or prioritize which attribute comes first alphabetically. This ambiguity can lead models to focus more on the visual prominence of the dotted pattern rather than the alphabetical order of attributes.
+
+2. **Legend Information**: The legend only shows the combined effect (&#x27;Metrics Line&#x27;) without distinguishing between &#x27;color&#x27; and &#x27;style&#x27;. This lack of separation might mislead the model into prioritizing the visually more distinctive feature (the dotted style).
+
+3. **Alphabetical Ordering Not Visually Apparent**: There&#x27;s no direct indication in the chart itself about alphabetical ordering of attributes, requiring external knowledge or explicit instruction.
+
+### Most Relevant Pitfall:
+The most relevant pitfall is the **lack of explicit labeling or indication of alphabetical order** within the chart or its components. The model might naturally focus on the visually dominant aspect (the dotted style) without considering the alphabetical order unless explicitly instructed.
+
+&lt;most_relevant&gt;lack of explicit labeling or indication of alphabetical order&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">lack of explicit labeling or indication of alphabetical order</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">160.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">The title of the chart is &#x27;Health Metrics Over Time&#x27;, and the label of the y-axis is &#x27;Values&#x27;. Which one is longer?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Health Metrics Over Time&quot;,
+  &quot;Prediction&quot;: &quot;Title&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls:
+
+1. **Title vs. Label Distinction Ambiguity**:
+   - The title &quot;Health Metrics Over Time&quot; and the y-axis label &quot;Values&quot; are visually distinct but conceptually similar since both describe aspects of the chart. This can lead to confusion if the model is not explicitly trained to distinguish between them.
+
+2. **Text Length Misinterpretation**:
+   - The model might misinterpret the task as identifying whether &quot;Title&quot; is longer than &quot;Values,&quot; rather than comparing the actual content of the title and label. This would result in an incorrect focus on the word &quot;Title&quot; instead of its content.
+
+3. **Font and Style Similarity**:
+   - Both the title and the y-axis label use a monospace font, which could make their visual distinction less clear, especially for models relying heavily on visual cues.
+
+4. **Spatial Positioning**:
+   - The spatial positioning of the title at the top and the y-axis label vertically might not be enough context for the model to correctly differentiate and compare their lengths.
+
+---
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall here is the **Text Length Misinterpretation**. The model seems to have misunderstood the task, focusing on the term &quot;Title&quot; rather than the actual content of the title (&quot;Health Metrics Over Time&quot;). This misinterpretation leads it to provide an incorrect answer.
+
+&lt;most_relevant&gt;Text Length Misinterpretation&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Text Length Misinterpretation</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">687.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Between the value of Device_A (1200) and Sensor_X (400), which one is smaller?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;400&quot;,
+  &quot;Prediction&quot;: &quot;Sensor_X&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Separate Scales on Y-Axis**:  
+   - Each subplot has its own y-axis scale. This makes direct visual comparison between Device_A and Sensor_X challenging because they are on different scales. Device_A&#x27;s value is around 1200 on the left subplot, while Sensor_X is around 400 on the right subplot.
+
+2. **Lack of Direct Comparison**:  
+   - The two subplots are not aligned or normalized for a direct comparison of their y-values. This can lead to confusion when trying to compare values visually across subplots.
+
+3. **Missing Value Labels**:  
+   - While the code adds labels at the top of each error bar, these labels might not be visible or clear enough in the rendered image, leading to reliance on visual interpretation alone.
+
+4. **Different Data Categories**:  
+   - Device_A belongs to one category (&quot;IoT Devices&quot;), while Sensor_X belongs to another (&quot;Sensors&quot;). The separation might make it less intuitive to compare values across categories.
+
+---
+
+### Most Relevant Pitfall:
+
+The primary issue causing the model’s error is the **separate scales on the y-axis**. Because Device_A is plotted on a scale ranging up to ~1200 and Sensor_X is on a scale up to ~420, the visual representation does not effectively communicate that 400 is indeed smaller than 1200.
+
+Thus, the most relevant pitfall is:
+
+&lt;most_relevant&gt;Separate scales on the y-axis&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Separate scales on the y-axis</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

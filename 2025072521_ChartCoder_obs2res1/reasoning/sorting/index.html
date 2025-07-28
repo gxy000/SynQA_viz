@@ -1,0 +1,261 @@
+<html>
+<head>
+<title>sorting</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>sorting</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "sorting": 5</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">94.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Arrange the salt concentrations in descending order.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;[5000, 4500, 3000]&quot;,
+  &quot;Prediction&quot;: &quot;Salt Concentration 5000&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Lack of Clear Numerical Ordering**:
+   - The chart does not explicitly display the numerical values of the salt concentrations in a sorted or visually ordered manner. This could mislead the viewer into only considering the labels without associating them with their actual values.
+
+2. **Similar Appearance of Wedges**:
+   - The wedges in the donut chart do not visually reflect the magnitude differences between the salt concentrations. This might lead viewers to assume equal proportions or miss the actual differences in values.
+
+3. **Inconsistent Labeling**:
+   - The labels &quot;Salt Concentration 3000&quot;, &quot;Salt Concentration 4500&quot;, and &quot;Salt Concentration 5000&quot; are presented alongside the wedges but lack clear visual cues about their relative magnitudes.
+
+4. **Absence of Explicit Sorting Indicators**:
+   - There are no arrows, numbers, or other sorting indicators that would guide the viewer to arrange the salt concentrations in descending order.
+
+---
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall causing the model&#x27;s error is the **lack of clear numerical ordering**. The chart fails to visually communicate the relative magnitudes of the salt concentrations, leading the model to incorrectly interpret the data.
+
+&lt;most_relevant&gt;Lack of Clear Numerical Ordering&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Lack of Clear Numerical Ordering</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">94.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">List the salt concentrations in ascending order.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;[3000, 4500, 5000]&quot;,
+  &quot;Prediction&quot;: &quot;To list the salt concentrations in ascending order, let&#x27;s identify the values provided:\n\n1. Salt Concentration 3000\n2. Salt Concentration 4500\n3. Salt Concentration 5000\n\nNow, we arrange these values in ascending order:\n- 3000\n- 4500\n- 5000\n\nThe lowest value is 3000.\n\n&lt;3000&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The model&#x27;s failure to correctly list the salt concentrations in ascending order can be attributed to the way information is presented in the chart image. Let’s analyze the potential pitfalls:
+
+### Potential Pitfalls:
+1. **Missing Labels or Data Values**: If the chart lacks clear labels or data points, it could confuse the model.
+2. **Incorrect Annotation Order**: The arrangement of annotations may not match the expected order of values, leading to misinterpretation.
+3. **Visual Overlap or Clutter**: Overlapping text or elements might make it difficult for the model to distinguish between different data points.
+4. **Misinterpretation of Visual Cues**: The model might misinterpret visual cues like colors or shapes instead of relying on numerical values.
+
+### Analysis of the Chart Image:
+- The chart presents three categories: Salt Concentration, PH Levels, and Water Temperature.
+- For Salt Concentration, the values are explicitly mentioned as &quot;Salt Concentration 3000,&quot; &quot;Salt Concentration 4500,&quot; and &quot;Salt Concentration 5000.&quot;
+- The values are visually separated and clearly labeled next to their respective segments in the pie chart.
+
+### Most Relevant Pitfall:
+The most likely reason for the model&#x27;s error is the **incorrect annotation order**. Although the values themselves are correct, the sequence in which they are listed in the chart image might not align with the expected ascending order. The model might have interpreted the order based on the visual placement or annotation sequence rather than the numerical values.
+
+Thus, the most relevant pitfall is:
+
+&lt;most_relevant&gt;Incorrect Annotation Order&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Incorrect Annotation Order</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">468.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Rank the values from smallest to largest using the smallest value 30 and the second smallest value 50.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;30, 50&quot;,
+  &quot;Prediction&quot;: &quot;Social Capital&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that may have caused the model&#x27;s error include:
+
+1. **Visual Dominance Misinterpretation**: The visual prominence of the &#x27;Social Capital&#x27; section due to its large area and bright color might have led the model to mistakenly prioritize it when ranking the values.
+
+2. **Label Positioning Ambiguity**: The labels are positioned within their respective sections but might not be directly associated with their values in a linear or numerical context, leading to confusion about which values belong to which labels.
+
+3. **Color-Coding Distraction**: The use of distinct colors for each section could inadvertently draw attention away from the numerical values, causing the model to focus more on visual characteristics rather than the actual data.
+
+4. **Value Sorting Absence**: The chart does not inherently sort the values from smallest to largest, leaving room for misinterpretation if the model attempts to rank based on visual cues rather than explicit numerical comparison.
+
+Among these, the **most relevant pitfall** contributing to the model&#x27;s error is:
+
+&lt;most_relevant&gt;Visual Dominance Misinterpretation&lt;/most_relevant&gt;
+
+This is because the large and brightly colored &#x27;Social Capital&#x27; section visually stands out, potentially misleading the model into prioritizing it despite it having one of the larger values, contrary to the task of ranking from smallest to largest.</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Visual Dominance Misinterpretation</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">582.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000003_column2.png" alt="row000003_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">List the platforms identified in the previous steps in ascending order of their Daily Active Users.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Twitter &lt; Snapchat &lt; TikTok &lt; Instagram &lt; Facebook&quot;,
+  &quot;Prediction&quot;: &quot;To determine the platforms in ascending order of their Daily Active Users, let&#x27;s analyze the bar graph:\n\n1. The orange bars represent \&quot;Daily Active Users.\&quot;\n2. From left to right, the platforms listed are Instagram, TikTok, Snapchat, Twitter, and Facebook.\n3. Observing the height of the orange bars:\n   - Instagram has the lowest orange bar.\n   - TikTok has a slightly taller orange bar than Instagram.\n   - Snapchat has a taller orange bar than TikTok.\n   - Twitter has a taller orange bar than Snapchat.\n   - Facebook has the tallest orange bar.\n\nBased on this analysis, the platforms in ascending order of their Daily Active Users are: Instagram, TikTok, Snapchat, Twitter, Facebook.\n\n&lt;Instagram&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that may lead to errors include:
+
+1. **Misinterpretation of Bar Heights**: The visual representation might make it seem like one platform has fewer active users than another when, in fact, the opposite is true. This can be misleading if the viewer doesn&#x27;t carefully compare the heights.
+
+2. **Incorrect Axis Labels**: The x-axis labels are rotated, which could confuse viewers about which bar corresponds to which platform.
+
+3. **Overlapping Bars**: The positioning of the bars might give a false impression of their relative heights, especially if they are close in value.
+
+4. **Lack of Numerical Data**: The absence of numerical values directly on the bars makes it harder to accurately compare the number of daily active users.
+
+The most relevant pitfall to the error in ordering the platforms by daily active users is the **misinterpretation of bar heights**. In this case, the model likely misread the relative heights of the blue bars (representing daily active users) due to the 3D perspective and visual distortion. 
+
+&lt;most_relevant&gt;Misinterpretation of bar heights&lt;most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Misinterpretation of bar heights</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">757.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000004_column2.png" alt="row000004_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Arrange the four countries in ascending order based on their populations: India, Brazil, and two other countries?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Brazil, Germany, India, China&quot;,
+  &quot;Prediction&quot;: &quot;Australia, Germany, Brazil, India&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The potential pitfalls in the chart image that could cause this error include:
+
+1. **Size Perception**: The visual size of the pie slices may not accurately represent the actual population values, leading to misinterpretation. For example, Australia&#x27;s slice might appear larger than it should be relative to its actual population.
+
+2. **Color Overlap**: The colors used for different countries might overlap or blend, making it difficult to distinguish between smaller segments, especially for countries like Germany and Brazil which have relatively small populations compared to others.
+
+3. **Label Placement**: The placement of labels can sometimes obscure the actual size of the pie slices. For instance, if the label for a small segment is placed far away from the slice, it might give a misleading impression about the size.
+
+4. **Lack of Numerical Values**: The absence of numerical values directly on the pie chart forces viewers to rely solely on visual estimation, which can be inaccurate.
+
+Among these pitfalls, the most relevant one causing the error is the **size perception** issue. The model likely misinterpreted the visual sizes of the pie slices, leading it to incorrectly rank Australia above Brazil and Germany in terms of population.
+
+&lt;most_relevant&gt;Size Perception&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Size Perception</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

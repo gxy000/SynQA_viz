@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>calculation</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>calculation</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "calculation": 3</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">30.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Can we determine if Region 2 has a larger y-value than Region 1?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Yes, Region 2 has a larger y-value.&quot;,
+  &quot;Prediction&quot;: &quot;Yes\n\n&lt;Yes&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Missing Data Point for Region 1:** The chart does not show a data point or label for Region 1. This absence can lead to confusion when trying to compare the y-values of Region 1 and Region 2.
+
+2. **Overlapping Labels:** If labels were overlapping, it might be difficult to distinguish between different regions. However, in this case, the labels appear clear and distinct.
+
+3. **Incorrect Scaling or Axis Range:** If the axes were incorrectly scaled or had an inappropriate range, it could distort the perception of relative y-values. But the y-axis appears to be correctly scaled from 300 to 450, which is consistent with the provided data.
+
+4. **Ambiguous Color Coding:** If the color coding was not clear or consistent, it could lead to misinterpretation. Here, each region has a unique color, so this is not a significant issue.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall here is the **missing data point for Region 1**. Without a visible data point for Region 1, it&#x27;s impossible to accurately compare its y-value with that of Region 2. This omission directly impacts the ability to answer whether Region 2 has a larger y-value than Region 1 based on the chart alone.
+
+&lt;most_relevant&gt;Missing data point for Region 1&lt;most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Missing data point for Region 1</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">304.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Arrange the categories in descending order by their Max values.</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Concerts, Exhibitions, Movies, Music, Books, Games&quot;,
+  &quot;Prediction&quot;: &quot;To arrange the categories in descending order by their Max values, let&#x27;s follow these steps:\n\n1. Identify the Max value for each category:\n   - Books: ~750\n   - Movies: ~1000\n   - Music: ~700\n   - Concerts: ~1100\n   - Games: ~450\n   - Exhibitions: ~1200\n\n2. Compare these values to determine the order:\n   - Exhibitions has the highest Max value (~1200).\n   - Next is Concerts (~1100).\n   - Then Movies (~1000).\n   - Followed by Books (~750).\n   - Then Music (~700).\n   - Lastly, Games (~450).\n\n3. Arrange the categories in descending order based on the Max values:\n   - Exhibitions\n   - Concerts\n   - Movies\n   - Books\n   - Music\n   - Games\n\n&lt;Exhibitions&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">The model&#x27;s error seems to arise from misinterpreting or incorrectly processing the &quot;Max&quot; values associated with each category when arranging them in descending order.
+
+### Potential Pitfalls in the Chart Image:
+1. **Visual Overlap**: The colors for different statistical measures (Min, Q1, Median, Q3, Max) might visually overlap, making it challenging to distinguish the exact &quot;Max&quot; value for some categories.
+2. **Color Perception**: The color coding could be confusing if the user relies too heavily on color instead of the actual height of the bars.
+3. **Bar Spacing**: If the spacing between the bars isn’t clear, it can be hard to identify which bar corresponds to the &quot;Max&quot; value.
+4. **Value Reading**: Without explicit numerical labels at the top of each bar, the heights must be estimated visually, leading to potential inaccuracies.
+
+### Most Relevant Pitfall:
+The **most relevant** pitfall here is likely the **lack of explicit numerical labels at the top of each &quot;Max&quot; bar**, causing the model to rely solely on visual estimation of the bar heights. This estimation can lead to errors, especially when the differences in bar heights are subtle. 
+
+&lt;most_relevant&gt;Lack of explicit numerical labels at the top of each &quot;Max&quot; bar&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Lack of explicit numerical labels at the top of each &quot;Max&quot; bar</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">592.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">What is the ratio between the median value of the Length dataset and the median value of the Width dataset?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;1.75&quot;,
+  &quot;Prediction&quot;: &quot;1.83&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Median Line Misinterpretation**: The median lines in box plots can sometimes be difficult to read accurately due to the visual representation. The user might misinterpret the exact position of these lines.
+
+2. **Scaling Differences**: The y-axis scales for &quot;Length&quot; and &quot;Width&quot; are different, which might visually distort the perception of the values when comparing them directly.
+
+3. **Data Point Precision**: The data points used for plotting may not be exactly represented on the box plot, leading to slight discrepancies in visual interpretation.
+
+4. **Manual Calculation Errors**: There could be errors in manually calculating the ratio if the median values are not precisely identified.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall here is the **median line misinterpretation**. The model likely misread the precise positions of the median lines for both datasets, leading to an incorrect calculation of their ratio. This is evident because the calculated ratio (1.83) is close but not exact compared to the ground truth (1.75).
+
+&lt;most_relevant&gt;Median line misinterpretation&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Median line misinterpretation</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

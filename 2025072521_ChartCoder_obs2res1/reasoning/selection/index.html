@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>selection</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>selection</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "selection": 1</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">413.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Given the largest section is Multimodal with a size of 2500, the smallest section is Dialogic with a size of 800, and the total size of all sections is 7800, which section has more than half the total size of all sections?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;No section exceeds 3900 in size.&quot;,
+  &quot;Prediction&quot;: &quot;Multimodal&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Visual Perception Bias**: The visual representation might make the &quot;Multimodal&quot; section appear larger than it actually is due to its bright color and central placement. This can lead to an overestimation of its proportion compared to others.
+
+2. **Lack of Clear Numerical Labels**: While percentages are shown, they are not directly linked to the raw values (e.g., 2500 for Multimodal). This can confuse viewers who might only rely on visual proportions without considering the actual numbers.
+
+3. **Legend Placement and Clarity**: The legend is positioned away from the pie slices, which may cause confusion if viewers do not associate the correct label with each slice.
+
+4. **Inaccurate Interpretation of Percentages**: The percentage values next to each slice (e.g., 32.1% for Multimodal) might be misinterpreted as absolute values instead of relative proportions.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall leading to the model&#x27;s error is the **visual perception bias**. The &quot;Multimodal&quot; section, being visually prominent, may have misled the model into thinking it represents more than half of the total size.
+
+&lt;most_relevant&gt;visual perception bias&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">visual perception bias</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>

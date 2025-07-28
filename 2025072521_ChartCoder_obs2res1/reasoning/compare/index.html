@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>compare</title>
+<style>
+td {vertical-align:top;padding:5px}
+pre {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+<h1>compare</h1>
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+></script>
+<script>
+function frameMove(elem, offset) {
+    elem = $(elem);
+    window.elem = elem;
+    data = JSON.parse(elem.parent().find(".data").html());
+    index = parseInt(elem.parent().find(".index").val());
+
+    nextIndex = index + offset;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex >= data.length) nextIndex = data.length - 1;
+
+    elem.parent().find(".index").val(nextIndex);
+    if ("image" in data[nextIndex]) {
+        elem.parent().find(".image").attr("src", data[nextIndex]["image"][0]).attr("alt", data[nextIndex]["image"][1]);
+    } else {
+        elem.parent().find(".text").html(data[nextIndex]["text"]);
+    }
+
+    if ("info" in data[nextIndex]) {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString() + " :: " + data[nextIndex]["info"]);
+    } else {
+        elem.parent().find(".info").html("Frame #" + nextIndex.toString());
+    }
+}
+</script>
+    
+<p>Total failure cases of factor "compare": 3</p>
+<style>
+.table0_column_column1 {  }
+.table0_td_column1 {  }
+.table0_column_column2 { width:600px }
+.table0_td_column2 {  }
+.table0_column_column3 { width:300px }
+.table0_td_column3 {  }
+.table0_column_column4 {  }
+.table0_td_column4 {  }
+.table0_column_column5 {  }
+.table0_td_column5 {  }
+.table0_column_column6 {  }
+.table0_td_column6 {  }
+</style>
+<h3>Table Name</h3>
+<table>
+<tr>
+  <td><b>ID</b></td>
+  <td><b>Chart</b></td>
+  <td><b>Question</b></td>
+  <td><b>Additional Information</b></td>
+  <td><b>Pitfalls</b></td>
+  <td><b>Most relevant pitfall</b></td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">404.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000000_column2.png" alt="row000000_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">What is the difference between the maximum energy consumptions of the city with the highest minimum energy consumption and the city with the lowest minimum energy consumption?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;500 kWh&quot;,
+  &quot;Prediction&quot;: &quot;700&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">To address the discrepancy between the predicted answer (700 kWh) and the ground truth (500 kWh), let&#x27;s first analyze the potential pitfalls in the chart:
+
+### Potential Pitfalls:
+1. **Misinterpretation of Minimum Energy Values:** The chart visually represents both the minimum and maximum energy values, but without careful attention, it can be easy to confuse which point corresponds to which value.
+
+2. **Incorrect Identification of Cities:** The cities are listed on the y-axis, and if the order or labeling is not correctly interpreted, it could lead to selecting the wrong cities for comparison.
+
+3. **Calculation Errors:** Even with correct data points, an arithmetic mistake during the calculation process can yield an incorrect result.
+
+4. **Outliers Misinterpretation:** Outliers are marked separately in red, and they should not be considered when identifying the minimum or maximum energy consumption for a city.
+
+### Most Relevant Pitfall:
+The most relevant pitfall here is the **Misinterpretation of Minimum Energy Values**. Specifically, the model may have incorrectly identified the city with the highest minimum energy consumption and/or the city with the lowest minimum energy consumption based on the visual representation.
+
+From the provided data:
+- New York has the highest minimum energy consumption at 120 kWh.
+- Chicago has the lowest minimum energy consumption at 50 kWh.
+
+The difference in maximum energy consumption between these two cities:
+- New York: 1800 kWh
+- Chicago: 1300 kWh
+
+Therefore, the correct difference is \( 1800 - 1300 = 500 \) kWh.
+
+The model likely misinterpreted the visual data and chose incorrect cities or values leading to the 700 kWh result.
+
+Thus, the most relevant pitfall is:
+
+&lt;most_relevant&gt;Misinterpretation of Minimum Energy Values&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Misinterpretation of Minimum Energy Values</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">852.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000001_column2.png" alt="row000001_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Given that Solar Panels contribute 25% and Wind Turbines contribute 30%, what is the difference between their contributions?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;5%&quot;,
+  &quot;Prediction&quot;: &quot;5&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Missing Percent Signs**: The percentages shown in the pie chart do not include the &#x27;%&#x27; symbol. This could lead to misinterpretation, especially if someone expects the &#x27;%&#x27; symbol to be present.
+
+2. **Label Overlap or Clarity Issues**: If any labels or text in the chart were overlapping or unclear, it might make it difficult to read the exact values.
+
+3. **Incorrect Legend or Label Mapping**: There should be no confusion in the mapping between the labels and the corresponding slices in the pie chart. However, if there was any mismatch, it could lead to incorrect interpretation.
+
+4. **Inconsistent Font Sizes or Colors**: Differences in font sizes or colors might make some parts of the chart harder to read, though this doesn’t seem to be an issue here.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall causing the model&#x27;s error is the **missing percent signs**. Since the model predicted &quot;5&quot; instead of &quot;5%&quot;, it indicates that the model did not correctly interpret the units of the values provided in the chart.
+
+Thus, the most relevant pitfall is:  
+&lt;most_relevant&gt;Missing Percent Signs&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Missing Percent Signs</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1">997.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000002_column2.png" alt="row000002_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3">Which one is larger: the Min value of Keras (100) or the Median value of XGBoost (350)?</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4">{
+  &quot;Ground Truth&quot;: &quot;Median value of XGBoost&quot;,
+  &quot;Prediction&quot;: &quot;To determine which value is larger, we need to compare the specified values from the image:\n\n1. Identify the Min value for Keras:\n   - The Min value for Keras is represented by a purple circle.\n   - From the plot, the Min value for Keras appears to be around 100.\n\n2. Identify the Median value for XGBoost:\n   - The Median value for XGBoost is represented by a black triangle.\n   - From the plot, the Median value for XGBoost appears to be around 350.\n\n3. Compare the two values:\n   - The Min value of Keras is 100.\n   - The Median value of XGBoost is 350.\n   - Clearly, 350 is larger than 100.\n\n&lt;350&gt;&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5">### Potential Pitfalls in the Chart Image:
+
+1. **Color Misinterpretation**: The colors used for different metrics (Min, Q1, Median, Q3, Max) may not be distinct enough, leading to confusion when visually identifying them. For example, the purple circle for Min might blend with other elements if not carefully observed.
+
+2. **Marker Overlap**: If markers representing different metrics for the same framework are too close together, they can overlap, making it difficult to distinguish between them accurately.
+
+3. **Legend Clarity**: The legend might not be entirely clear or easily readable, leading to misidentification of which marker corresponds to which metric.
+
+4. **Value Estimation**: Visually estimating the exact value of a point on the chart can introduce errors, especially if the gridlines or axis labels are not detailed enough.
+
+5. **X-axis Label Alignment**: If the labels for frameworks on the x-axis are not properly aligned with their corresponding points, it could lead to associating the wrong values with the wrong frameworks.
+
+### Most Relevant Pitfall:
+
+The most relevant pitfall here is the **value estimation** issue. Since the task involves comparing specific numerical values (Min of Keras being 100 and Median of XGBoost being 350), any inaccuracy in visually reading these values directly from the chart can lead to incorrect conclusions. Even though the difference between 100 and 350 is significant and should be easily discernible, relying purely on visual estimation without precise numerical labels can still introduce errors.
+
+&lt;most_relevant&gt;Value Estimation&lt;/most_relevant&gt;</pre>
+  </td>
+  <td class="table0_td_column6">
+    <pre class="table0_column_column6">Value Estimation</pre>
+  </td>
+</tr>
+</table>
+</body>
+</html>
