@@ -40,7 +40,7 @@ function frameMove(elem, offset) {
 }
 </script>
     
-<p>Total complex QAs: 114</p>
+<p>Total complex QAs: 112</p>
 <style>
 .table0_column_column1 {  }
 .table0_td_column1 {  }
@@ -77,7 +77,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the new percentage of Greenhouse Emissions greater than 20%, if its value is swapped with the Deforestation Rate?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;current percentage of Greenhouse Emissions&#x27; is 57.7%, &#x27;current percentage of Deforestation Rate&#x27; is 28.8%]  \n2. swap_1: [&#x27;swap the values of Greenhouse Emissions and Deforestation Rate&#x27; results in Greenhouse Emissions being 28.8% and Deforestation Rate being 57.7%]  \n3. compare_tail: [&#x27;new percentage of Greenhouse Emissions 28.8%&#x27; is compared with 20%]\n\nThe final answer is Yes, the new percentage of Greenhouse Emissions (28.8%) is greater than 20%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -124,7 +124,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is there any other single category with a higher percentage than double the combined percentage of Sea Level Rise and Temperature Rise?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: \n   - percentage of Sea Level Rise: 1.0%\n   - percentage of Temperature Rise: 2.9%\n   - any category meeting the condition: Greenhouse Emissions (57.7%)\n\n2. calculation_1:\n   - double the combined percentage of Sea Level Rise and Temperature Rise: 2 * (1.0% + 2.9%) = 2 * 3.9% = 7.8%\n\n3. compare_2:\n   - each other category&#x27;s percentage compared to calculated value:\n     - Species Extinction: 9.6% &gt; 7.8%\n     - Deforestation Rate: 28.8% &gt; 7.8%\n     - Greenhouse Emissions: 57.7% &gt; 7.8%\n\nThe final answer is Yes, there are categories (Species Extinction, Deforestation Rate, and Greenhouse Emissions) with higher percentages than double the combined percentage of Sea Level Rise and Temperature Rise.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -171,7 +171,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What would be the estimated temperature on Day 5 if the temperature increases at the same rate from Day 1 to Day 3?&quot;,
   &quot;Answer&quot;: &quot;35\u00b0C&quot;,
   &quot;Cleaned_answer&quot;: &quot;35&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the temperature values for Day 1 and Day 3:\n   - Temperature on Day 1: 25\u00b0C\n   - Temperature on Day 3: 30\u00b0C\n\n2. Calculate the rate of temperature increase from Day 1 to Day 3:\n   - Rate of temperature increase = (Temperature on Day 3 - Temperature on Day 1) / (Day 3 - Day 1)\n   - Rate of temperature increase = (30\u00b0C - 25\u00b0C) / (3 - 1) = 5\u00b0C / 2 days = 2.5\u00b0C/day\n\n3. Estimate the temperature on Day 5 based on the calculated rate:\n   - Estimated temperature on Day 5 = Temperature on Day 3 + (Rate of temperature increase * (Day 5 - Day 3))\n   - Estimated temperature on Day 5 = 30\u00b0C + (2.5\u00b0C/day * (5 - 3)) = 30\u00b0C + (2.5\u00b0C/day * 2 days) = 30\u00b0C + 5\u00b0C = 35\u00b0C\n\nThe final answer is 35\u00b0C.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -218,7 +218,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is the correct answer to the following question: if the temperature decreases at the same rate from Day 2 to Day 4, what would be the estimated temperature on Day 6?&quot;,
   &quot;Answer&quot;: &quot;a) 18 degrees Celsius&quot;,
   &quot;Cleaned_answer&quot;: &quot;16&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;temperature on Day 2&#x27;, &#x27;temperature on Day 4&#x27;]\n   - From the data provided, the temperature on Day 2 is 28\u00b0C and the temperature on Day 4 is 22\u00b0C.\n\n2. calculation_1: [&#x27;rate of temperature decrease from Day 2 to Day 4&#x27;]\n   - The decrease in temperature from Day 2 to Day 4 is 28\u00b0C - 22\u00b0C = 6\u00b0C over 2 days.\n   - The rate of temperature decrease is 6\u00b0C / 2 days = 3\u00b0C per day.\n\n3. calculation_tail: [&#x27;estimated temperature on Day 6 based on the rate of decrease&#x27;]\n   - If the temperature continues to decrease at the rate of 3\u00b0C per day, the decrease from Day 4 to Day 6 would be 3\u00b0C/day * 2 days = 6\u00b0C.\n   - The estimated temperature on Day 6 would be 22\u00b0C - 6\u00b0C = 16\u00b0C.\n\nThe final answer is 16\u00b0C.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -259,7 +259,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What would be the estimated pressure on Day 5 if the pressure decreases at the same rate from Day 1 to Day 3?&quot;,
   &quot;Answer&quot;: &quot;995 hPa&quot;,
   &quot;Cleaned_answer&quot;: &quot;1004&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the pressure values on Day 1 and Day 3:  \n   - On Day 1, the pressure value is 1020 hPa.  \n   - On Day 3, the pressure value is 1012 hPa.  \n\n2. Calculate the rate of decrease from Day 1 to Day 3:  \n   - The change in pressure over these two days is 1020 hPa - 1012 hPa = 8 hPa.  \n   - The number of days between Day 1 and Day 3 is 2 days.  \n   - Therefore, the rate of decrease per day is 8 hPa / 2 days = 4 hPa/day.  \n\n3. Estimate the pressure on Day 5 based on the calculated rate:  \n   - From Day 3 to Day 5, there are 2 more days.  \n   - Using the rate of decrease of 4 hPa/day, the total decrease over these 2 days would be 4 hPa/day * 2 days = 8 hPa.  \n   - Starting from 1012 hPa on Day 3, subtracting 8 hPa gives an estimated pressure of 1012 hPa - 8 hPa = 1004 hPa on Day 5.  \n\nThe final answer is 1004 hPa.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -300,7 +300,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference in the direction of the vectors at point (2, -2) between Vector Field 1 and Vector Field 2, and choose the correct option based on the comparison result? a) Both fields show the same vertical direction b) Vector Field 1 shows vectors pointing up while Vector Field 2 shows vectors pointing down c) Vector Field 1 shows vectors pointing down while Vector Field 2 shows vectors pointing up d) Neither field has a vertical vector at this point&quot;,
   &quot;Answer&quot;: &quot;b) Vector Field 1 shows vectors pointing up while Vector Field 2 shows vectors pointing down&quot;,
   &quot;Cleaned_answer&quot;: &quot;b) Vector Field 1 shows vectors pointing up while Vector Field 2 shows vectors pointing down&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;direction of vectors at point 2 -2&#x27;, &#x27;direction of vectors at point 2 -2&#x27;]  \n   - For Vector Field 1 at point (2, -2): U1 = -(-2) = 2, V1 = 2. The vector is directed upwards and to the right.  \n   - For Vector Field 2 at point (2, -2): U2 = sin(2) \u2248 0.91, V2 = cos(-2) \u2248 -0.42. The vector is directed slightly upwards but more horizontally.\n\n2. compare_1: [&#x27;direction comparison between the two fields at point 2 -2&#x27;]  \n   - Vector Field 1 has a positive V1 value indicating an upward direction.  \n   - Vector Field 2 has a negative V2 value indicating a downward direction.  \n   - Therefore, Vector Field 1 points up while Vector Field 2 points down.\n\n3. selection_tail: [&#x27;choose the correct option based on the comparison result&#x27;]  \n   - Based on the comparison, the correct option is: b) Vector Field 1 shows vectors pointing up while Vector Field 2 shows vectors pointing down.\n\nThe final answer is b) Vector Field 1 shows vectors pointing up while Vector Field 2 shows vectors pointing down.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -335,7 +335,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the difference between the first and second data points greater than 10?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the value of the first data point: 75  \n   identify the value of the second data point: 85  \n\n2. calculate the difference between the first and second data points: 85 - 75 = 10  \n\n3. compare the difference with 10: 10 == 10  \n\nThe final answer is No, the difference between the first and second data points is not greater than 10; it is equal to 10.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -382,7 +382,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Rank the algorithms SVM, Linear Regression, and Decision Tree based on their performance percentages.&quot;,
   &quot;Answer&quot;: &quot;SVM &gt; Linear Regression &gt; Decision Tree&quot;,
   &quot;Cleaned_answer&quot;: &quot;SVM &gt; Linear Regression &gt; Decision Tree&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification:  \n   - performance percentage of SVM: 25.6%  \n   - performance percentage of Linear Regression: 24.7%  \n   - performance percentage of Decision Tree: 23.9%  \n\n2. ranking_simple:  \n   - order the algorithms based on their performance percentages: SVM (25.6%) &gt; Linear Regression (24.7%) &gt; Decision Tree (23.9%)\n\nThe final answer is: SVM &gt; Linear Regression &gt; Decision Tree.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -423,7 +423,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: Decision Tree has a lower performance percentage than both Linear Regression and SVM?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: \n   - performance percentage of Decision Tree: 23.9%\n   - performance percentage of Linear Regression: 24.7%\n   - performance percentage of SVM: 25.6%\n\n2. compare_1:\n   - Decision Tree (23.9%) vs Linear Regression (24.7%): Decision Tree has a lower performance percentage.\n   - Decision Tree (23.9%) vs SVM (25.6%): Decision Tree has a lower performance percentage.\n\n3. factchecking_tail:\n   - Given the findings from the previous steps, the statement that Decision Tree has a lower performance percentage than both Linear Regression and SVM is true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -476,7 +476,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the ratio remains constant, what would be the energy consumption in Usage if Processing consumes 8000 units?&quot;,
   &quot;Answer&quot;: &quot;12000 units&quot;,
   &quot;Cleaned_answer&quot;: &quot;12000&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the current energy consumption of Processing and Usage:\n   - Current energy consumption of Processing: 6500 units\n   - Current energy consumption of Usage: 9730 units\n\n2. Calculate the new energy consumption in Usage when Processing consumes 8000 units while maintaining the same ratio:\n   - Current ratio between Processing and Usage: 9730 / 6500 \u2248 1.5\n   - New energy consumption in Usage: 8000 * 1.5 = 12000 units\n\n3. Determine the energy consumption in Usage if Processing consumes 8000 units, assuming the ratio remains constant:\n   - Based on the calculation, the new energy consumption in Usage would be 12000 units.\n\nThe final answer is 12000 units.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -510,6 +510,47 @@ function frameMove(elem, offset) {
     <img class="table0_column_column2" src="assets/table0/row000010_column2.png" alt="row000010_column2.png" />
   </td>
   <td class="table0_td_column3">
+    <div class="table0_column_column3" style="">1</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4" style="">{
+  &quot;ComplexQ&quot;: &quot;What is the difference between the values of QuantumLatency and QuantumSynchronization?&quot;,
+  &quot;Answer&quot;: &quot;25&quot;,
+  &quot;Cleaned_answer&quot;: &quot;25&quot;,
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the value of QuantumLatency: 50  \n2. identify the value of QuantumSynchronization: 75  \n3. calculate the difference between QuantumLatency and QuantumSynchronization: 75 - 50 = 25  \nThe final answer is 25.&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5" style="">[
+  {
+    &quot;Question&quot;: &quot;What is the value of QuantumLatency?&quot;,
+    &quot;Answer&quot;: &quot;50&quot;,
+    &quot;Cleaned_answer&quot;: &quot;50&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the value of QuantumSynchronization?&quot;,
+    &quot;Answer&quot;: &quot;75&quot;,
+    &quot;Cleaned_answer&quot;: &quot;75&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the difference between QuantumLatency and QuantumSynchronization?&quot;,
+    &quot;Answer&quot;: &quot;25&quot;,
+    &quot;Cleaned_answer&quot;: &quot;25&quot;,
+    &quot;Subquestion_type&quot;: &quot;calculation_simple&quot;
+  }
+]</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1" style="">10.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000011_column2.png" alt="row000011_column2.png" />
+  </td>
+  <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
   </td>
   <td class="table0_td_column4">
@@ -517,7 +558,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the value for QuantumLatency decreases by 15, what would be the new value compared to QuantumSynchronization?&quot;,
   &quot;Answer&quot;: &quot;None of the provided options are correct.&quot;,
   &quot;Cleaned_answer&quot;: &quot;35&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the current value of QuantumLatency: The current value of QuantumLatency is 50.\n\n2. Calculate the new value after decreasing by 15: The new value of QuantumLatency after decreasing by 15 is 50 - 15 = 35.\n\n3. Compare the new value with QuantumSynchronization: The value of QuantumSynchronization is 75, which is greater than the new value of QuantumLatency (35).\n\nThe final answer is that if the value for QuantumLatency decreases by 15, the new value (35) would be less than QuantumSynchronization (75).&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -548,7 +589,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">12.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000011_column2.png" alt="row000011_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000012_column2.png" alt="row000012_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -558,7 +599,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The difference between the highest and lowest percentage among Healthcare, Technology, and Education is greater than 10%?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;percentage of Healthcare&#x27;: 31.6%, &#x27;percentage of Technology&#x27;: 23.7%, &#x27;percentage of Education&#x27;: 18.4%]\n\n2. calculation_1: [&#x27;difference between highest and lowest percentages&#x27;] = 31.6% - 18.4% = 13.2%\n\n3. compare_2: [&#x27;difference  10&#x27;] = 13.2% &gt; 10% (True)\n\n4. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;] = Since the difference is greater than 10%, the statement is true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -601,7 +642,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">12.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000012_column2.png" alt="row000012_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000013_column2.png" alt="row000013_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -611,7 +652,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the percentage for Technology increases by 3%, what is the new percentage of Technology? a) 26.7% b) 24.7% c) 25.7% d) 27.7%&quot;,
   &quot;Answer&quot;: &quot;a) 26.7%&quot;,
   &quot;Cleaned_answer&quot;: &quot;26.7&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: The current percentage of Technology is 23.7%.  \n2. calculation_simple: Adding 3 to the current percentage gives 23.7% + 3% = 26.7%.  \nThe final answer is 26.7%, which corresponds to option a) 26.7%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -633,41 +674,6 @@ function frameMove(elem, offset) {
 </tr>
 <tr>
   <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">13.png</pre>
-  </td>
-  <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000013_column2.png" alt="row000013_column2.png" />
-  </td>
-  <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">3</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;What is the difference between the upper quartile of Telecommunications and the upper quartile of Biotechnology?&quot;,
-  &quot;Answer&quot;: &quot;40&quot;,
-  &quot;Cleaned_answer&quot;: &quot;40&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What is the upper quartile of Telecommunications?&quot;,
-    &quot;Answer&quot;: &quot;225&quot;,
-    &quot;Cleaned_answer&quot;: &quot;230&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the upper quartile of Biotechnology?&quot;,
-    &quot;Answer&quot;: &quot;190&quot;,
-    &quot;Cleaned_answer&quot;: &quot;195&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
     <pre class="table0_column_column1" style="">14.png</pre>
   </td>
   <td class="table0_td_column2">
@@ -681,7 +687,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between January and May Data Traffic values, and is the increase equally distributed across January to May?&quot;,
   &quot;Answer&quot;: &quot;30 TB, False&quot;,
   &quot;Cleaned_answer&quot;: &quot;30, False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Data Traffic value in January&#x27; = 50, &#x27;Data Traffic value in May&#x27; = 80, &#x27;Data Traffic values for February March and April&#x27; = [55, 60, 70]]\n\n2. calculation_1: [&#x27;Difference between May and January Data Traffic&#x27;] = 80 - 50 = 30\n\n3. analysis_tail: [&#x27;Distribution of increase across January to May&#x27;] = Increase from January to February: 55-50=5, February to March: 60-55=5, March to April: 70-60=10, April to May: 80-70=10; The increases are not equal across all months, with larger jumps between March-April and April-May compared to January-February and February-March.\n\nThe final answer is the difference between January and May Data Traffic values is 30 TB, and the increase is not equally distributed across January to May.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -734,7 +740,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the increase in Data Traffic from February to April greater than the increase from January to February?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;data traffic in February&#x27; = 55 TB, &#x27;data traffic in April&#x27; = 70 TB, &#x27;data traffic in January&#x27; = 50 TB]\n\n2. calculation_1: [&#x27;increase in data traffic from February to April&#x27; = 70 TB - 55 TB = 15 TB]\n\n3. calculation_2: [&#x27;increase in data traffic from January to February&#x27; = 55 TB - 50 TB = 5 TB]\n\n4. compare_tail: [&#x27;which increase is greater&#x27; = 15 TB &gt; 5 TB]\n\nThe final answer is Yes, the increase in Data Traffic from February to April is greater than the increase from January to February.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -793,7 +799,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement True or False: The Data Traffic in April is twice the Data Traffic in January?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the Data Traffic in April and January:  \n   - Data Traffic in April: 70 TB  \n   - Data Traffic in January: 50 TB  \n\n2. Compare if April&#x27;s traffic is twice January&#x27;s traffic:  \n   - Twice the Data Traffic in January would be 2 * 50 = 100 TB.  \n   - Since the Data Traffic in April is 70 TB, it is not equal to 100 TB.  \n\n3. Given the finding from the previous step, check if the statement is true:  \n   - The statement claims that the Data Traffic in April is twice the Data Traffic in January.  \n   - Based on our comparison, 70 TB is not equal to 100 TB, so the statement is false.  \n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -840,7 +846,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the average task completion percentage for January and March, formatted as xx.x%?&quot;,
   &quot;Answer&quot;: &quot;89.0%&quot;,
   &quot;Cleaned_answer&quot;: &quot;89.0&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;task completion percentage for January&#x27;, &#x27;task completion percentage for March&#x27;]\n   - task completion percentage for January: 90%\n   - task completion percentage for March: 88%\n\n2. calculation_1: [&#x27;average of both percentages&#x27;]\n   - average of both percentages: (90% + 88%) / 2 = 89%\n\n3. formatting_tail: [&#x27;result as xxx&#x27;]\n   - result as xx.x%: 89.0%\n\nThe final answer is 89.0%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -887,7 +893,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the total number of errors and failures in February, formatted as x?&quot;,
   &quot;Answer&quot;: &quot;3&quot;,
   &quot;Cleaned_answer&quot;: &quot;3&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;number of human errors in February&#x27;, &#x27;number of robot failures in February&#x27;]\n   - number of human errors in February: 2\n   - number of robot failures in February: 1\n\n2. calculation_1: [&#x27;sum of human errors and robot failures in February&#x27;]\n   - sum of human errors and robot failures in February: 2 + 1 = 3\n\n3. formatting_tail: [&#x27;result as x&#x27;]\n   - result as x: 3\n\nThe final answer is 3.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -934,7 +940,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False? The number of robot failures in April is greater than the number of robot failures in January.&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;number of robot failures in April&#x27; is 2, &#x27;number of robot failures in January&#x27; is 2]  \n2. compare_1: [&#x27;number of robot failures in April&#x27; (2) is equal to &#x27;number of robot failures in January&#x27; (2)]  \n3. factchecking_tail: [&#x27;Given the finding from the previous step, the statement \&quot;The number of robot failures in April is greater than the number of robot failures in January\&quot; is false&#x27;]  \nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -981,7 +987,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the number of human errors in March was doubled, what would be the new total number of errors and failures in March, formatted as x?&quot;,
   &quot;Answer&quot;: &quot;11&quot;,
   &quot;Cleaned_answer&quot;: &quot;11&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: The number of human errors in March is 4, and the number of robot failures in March is 3.\n\n2. calculation_1: Double the number of human errors in March: 4 * 2 = 8.\n\n3. calculation_2: Sum of doubled human errors and robot failures in March: 8 + 3 = 11.\n\n4. formatting_tail: Result as x: 11.\n\nThe final answer is 11.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1034,7 +1040,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which month had a higher task completion percentage between April and February?&quot;,
   &quot;Answer&quot;: &quot;February, 92.0%&quot;,
   &quot;Cleaned_answer&quot;: &quot;February, 92&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;task completion percentage of April&#x27;, &#x27;task completion percentage of February&#x27;]  \n   - task completion percentage of April: 91%  \n   - task completion percentage of February: 92%\n\n2. compare_simple: [&#x27;which one is higher&#x27;]  \n   - Comparing the percentages, 92% is higher than 91%.\n\nWhich month had a higher task completion percentage between April and February?  \nThe final answer is February.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1075,7 +1081,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Does swapping the Investment value with the Jobs value for Clean Energy 1 create a greater disparity between Investment and Patents compared to the original difference?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;No&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the original values for Clean Energy 1:\n   - original Investment value for Clean Energy 1: 12000\n   - original Jobs value for Clean Energy 1: 7000\n   - original Patents value for Clean Energy 1: 1500\n\n2. Calculate the original difference between Investment and Patents:\n   - original difference between Investment and Patents: 12000 - 1500 = 10500\n\n3. Calculate the new difference after swapping Investment with Jobs:\n   - new Investment value (swapped with Jobs): 7000\n   - new difference between swapped Jobs and Patents: 7000 - 1500 = 5500\n\n4. Compare the new difference with the original difference:\n   - new difference vs original difference: 5500 &lt; 10500\n\nThe final answer is No, swapping the Investment value with the Jobs value for Clean Energy 1 does not create a greater disparity between Investment and Patents compared to the original difference.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1134,7 +1140,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement about vector directions at (4, 4), (2, 2), and (0, 0) being the same when ranked by X-axis components true?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the vector directions at points (4, 4): The vector at point (4, 4) has a direction consistent with all other vectors in the plot, pointing diagonally upwards to the right due to constant U and V components across the entire grid.\n\n2. compare the ranking of vectors by X-axis components: Since the X-axis component (U) is uniform across all points, including (4, 4), (2, 2), and (0, 0), these vectors will have identical X-axis components and thus be ranked equally when comparing their X-axis contributions.\n\n3. does the statement hold true based on the comparison: Yes, because the X-axis component is the same for all vectors, the ranking by X-axis components would place the vectors at (4, 4), (2, 2), and (0, 0) at the same rank.\n\nThe final answer is that the statement about vector directions at (4, 4), (2, 2), and (0, 0) being the same when ranked by X-axis components is true.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1175,7 +1181,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the rounded average value of Transportation, Technology, and Agriculture in the First Dataset?&quot;,
   &quot;Answer&quot;: &quot;58&quot;,
   &quot;Cleaned_answer&quot;: &quot;58&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification:  \n   - value of Transportation in the First Dataset: 55  \n   - value of Technology in the First Dataset: 75  \n   - value of Agriculture in the First Dataset: 45  \n\n2. calculation_1:  \n   - average of these three values: (55 + 75 + 45) / 3 = 175 / 3 = 58.333333333333336  \n\n3. calculation_tail:  \n   - round the average value: round(58.333333333333336) = 58  \n\nThe final answer is 58.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1228,7 +1234,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is there a positive correlation between the categories&#x27; positions and their values in the Second Dataset?&quot;,
   &quot;Answer&quot;: &quot;False, 0.0&quot;,
   &quot;Cleaned_answer&quot;: &quot;There isn&#x27;t a consistent positive correlation&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: \n   - categories positions in the Second Dataset: Education (position 1), Health (position 2), Employment (position 3)\n   - categories values in the Second Dataset: 65, 80, 70\n\n2. analysis_1: \n   - correlation between positions and values: \n     - Position 1 (Education): Value 65\n     - Position 2 (Health): Value 80\n     - Position 3 (Employment): Value 70\n     As position increases from 1 to 2, value increases from 65 to 80. However, as position increases from 2 to 3, value decreases from 80 to 70.\n\n3. factchecking_tail: \n   - Is the correlation positive: No, the relationship is not consistently positive since the value decreases when moving from Health to Employment.\n\nThe final answer is no, there is not a positive correlation between the categories&#x27; positions and their values in the Second Dataset.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1269,7 +1275,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Will Finance reach Healthcare&#x27;s current efficiency value if it increases at half the rate of Healthcare&#x27;s difference from Finance?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the current efficiency value of Finance: 70  \n   identify the current efficiency value of Healthcare: 90  \n\n2. calculate the difference between Healthcare and Finance: 90 - 70 = 20  \n\n3. calculate half the rate of this difference: 20 / 2 = 10  \n\n4. calculate the new value of Finance after increasing by the calculated amount: 70 + 10 = 80  \n\n5. compare the new value of Finance (80) vs the current value of Healthcare (90): 80 is less than 90  \n\nThe final answer is No, Finance will not reach Healthcare&#x27;s current efficiency value if it increases at half the rate of Healthcare&#x27;s difference from Finance.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1328,7 +1334,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between Technology&#x27;s efficiency value after a 20% increase and Automation&#x27;s efficiency value?&quot;,
   &quot;Answer&quot;: &quot;12&quot;,
   &quot;Cleaned_answer&quot;: &quot;13&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the efficiency values for Technology and Automation from the chart: Technology&#x27;s efficiency value is 60, and Automation&#x27;s efficiency value is 85.\n\n2. calculate a 20% increase on Technology&#x27;s efficiency value: 20% of 60 is 12, so the increased value is 60 + 12 = 72.\n\n3. find the difference between the increased Technology value (72) and Automation&#x27;s value (85): 85 - 72 = 13.\n\nThe final answer is 13.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1375,7 +1381,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between the new Manufacturing value and Finance&#x27;s efficiency value if Manufacturing&#x27;s efficiency increases by 50%?&quot;,
   &quot;Answer&quot;: &quot;5&quot;,
   &quot;Cleaned_answer&quot;: &quot;5&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. Identify Manufacturing&#x27;s current efficiency value: 50  \n   Identify Finance&#x27;s efficiency value: 70  \n\n2. Calculate the new Manufacturing efficiency value after increasing by 50%:  \n   New value = 50 + (50 * 0.5) = 75  \n\n3. Determine the difference between the new Manufacturing value and Finance&#x27;s efficiency value:  \n   Difference = 75 - 70 = 5  \n\nThe final answer is 5.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1422,7 +1428,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the percentage of product 101 increases by 5%, what is the difference between the new percentage of product 101 and product 505? a) 6.8%; b) 7.3%; c) 6.3%; d) 7.8%.&quot;,
   &quot;Answer&quot;: &quot;c)&quot;,
   &quot;Cleaned_answer&quot;: &quot;c) 6.3&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification:  \n   - current percentage of product 101: 19.5%  \n   - current percentage of product 505: 18.2%\n\n2. calculation_1:  \n   - new percentage after increasing product 101 by 5%: 19.5% + 5% = 24.5%\n\n3. calculation_tail:  \n   - difference between the new percentage of product 101 and product 505: 24.5% - 18.2% = 6.3%\n\nThe final answer is 6.3%. Therefore, the correct option is c) 6.3%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1469,7 +1475,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the impact on Safety was applied to Regulations instead, what would be the final percentage of Regulations?&quot;,
   &quot;Answer&quot;: &quot;50%&quot;,
   &quot;Cleaned_answer&quot;: &quot;50&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the initial percentage of Regulations and the impact on Safety:\n   - Initial percentage of Regulations: 60%\n   - Impact on Safety: -10%\n\n2. Calculate the final percentage of Regulations if the Safety impact (-10%) is applied:\n   - Final percentage = Initial percentage of Regulations + Impact on Safety\n   - Final percentage = 60% + (-10%) = 50%\n\nThe final answer is 50%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1510,7 +1516,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the likelihood of Energy contributions exceeding 4000 units in the future if the trend continues as observed from 2015 to 2019?&quot;,
   &quot;Answer&quot;: &quot;Low&quot;,
   &quot;Cleaned_answer&quot;: &quot;high&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the energy contribution values from 2015 to 2019: The values are [6000, 6100, 6400, 6600, 6800].\n\n2. Analyze the trend of energy contribution over these years: The trend shows a consistent increase. The differences between consecutive years are approximately 100, 300, 200, and 200 respectively.\n\n3. Project the future energy contribution assuming the trend continues: Based on the average yearly increase of around 200 units, we can project that in subsequent years, the energy contribution will continue to rise by roughly 200 units per year.\n\n4. Compare the projected future value with 4000 units: The projected future values will be significantly higher than 4000 units. In fact, even the lowest value in the given dataset (6000 in 2015) is already well above 4000 units.\n\nThe final answer is that the likelihood of Energy contributions exceeding 4000 units in the future is very high, almost certain, given the consistent upward trend observed from 2015 to 2019.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1557,7 +1563,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the potential impact on the area of Forests in the future if the trend of Urban Area growth continues?&quot;,
   &quot;Answer&quot;: &quot;Remain largely unchanged&quot;,
   &quot;Cleaned_answer&quot;: &quot;decline&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the trend of Urban Area growth over years and current area of Forests:\n   - Trend of Urban Area growth: The data shows a consistent increase from 3000 square km in 2010 to 4300 square km in 2014.\n   - Current area of Forests: In 2014, the area of Forests is approximately 11100 square km.\n\n2. Project the potential impact on Forests area based on the identified trends:\n   - If the urban growth trend continues at the same rate, the Urban Area will likely continue expanding, potentially reducing the Forests area.\n   - Assuming linear growth, the increase in Urban Area per year is about 300 square km ((4300 - 3000) / 4). This suggests that the Forests may lose around 300 square km annually to urban development.\n\n3. Determine the potential impact on the area of Forests in the future if the trend of Urban Area growth continues:\n   - Based on the projected trend, the Forests area would decrease by approximately 300 square km each year due to urban expansion.\n   - If this trend persists, the Forests area could face a significant reduction over time, potentially leading to a substantial loss of forested land.\n\nThe final answer is that the potential impact on the area of Forests in the future, if the trend of Urban Area growth continues, is a likely reduction of around 300 square km per year, leading to a significant decline in Forests area over time.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1598,7 +1604,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What would be the approximate contribution of Transport in 2020 if the trend of increasing Transport contributions continues as observed from 2015 to 2019?&quot;,
   &quot;Answer&quot;: &quot;4000 units&quot;,
   &quot;Cleaned_answer&quot;: &quot;4000&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the Transport contribution values from 2015 to 2019:  \n   - 2015: 3000  \n   - 2016: 3200  \n   - 2017: 3400  \n   - 2018: 3600  \n   - 2019: 3800  \n\n2. Calculate the trend of Transport contributions over the years:  \n   - Increase from 2015 to 2016: 3200 - 3000 = 200  \n   - Increase from 2016 to 2017: 3400 - 3200 = 200  \n   - Increase from 2017 to 2018: 3600 - 3400 = 200  \n   - Increase from 2018 to 2019: 3800 - 3600 = 200  \n   - The trend shows a consistent increase of 200 units per year.  \n\n3. Project the approximate Transport contribution for 2020 based on the trend:  \n   - If the trend continues, the increase from 2019 to 2020 would also be 200 units.  \n   - Therefore, the approximate contribution for 2020 would be 3800 + 200 = 4000 units.  \n\nThe final answer is 4000 units.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1639,7 +1645,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: If the trend of decreasing Grasslands continues as observed from 2010 to 2014, the area of Grasslands will be less than 10000 square km in 2015?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the area of grasslands from 2010 to 2014: From the \&quot;Land Use\&quot; subplot, the areas for grasslands are approximately 8000, 7900, 7700, 7600, and 7500 square km for the years 2010, 2011, 2012, 2013, and 2014 respectively.\n\n2. Compare the trend of grasslands decrease over these years: The grassland area decreases by roughly 100 square km each year between 2010 and 2014.\n\n3. Project the trend to 2015: If the trend continues, we subtract another 100 square km from the 2014 value (7500 square km). This gives us an estimated area of 7400 square km for 2015.\n\n4. Compare the projected area in 2015 with 10000 square km: The projected area of 7400 square km is indeed less than 10000 square km.\n\n5. Fact-check the statement based on the findings: Given the projected area of 7400 square km in 2015, which is less than 10000 square km, the statement holds true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1686,7 +1692,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the trend of increasing Energy contributions continues as observed from 2015 to 2019, what would be the approximate contribution of Energy in 2020?&quot;,
   &quot;Answer&quot;: &quot;b) 3200 units&quot;,
   &quot;Cleaned_answer&quot;: &quot;7000&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Energy contributions from 2015 to 2019&#x27;]  \n   - From the code and chart, the Energy contributions for each year are:  \n     - 2015: 6000 units  \n     - 2016: 6100 units  \n     - 2017: 6400 units  \n     - 2018: 6600 units  \n     - 2019: 6800 units  \n\n2. trendanalysis_1: [&#x27;trend of Energy contributions over these years&#x27;]  \n   - Observing the values, there is an increasing trend over the years.  \n   - Calculate the change between each consecutive year:  \n     - 2015-2016: 6100 - 6000 = 100  \n     - 2016-2017: 6400 - 6100 = 300  \n     - 2017-2018: 6600 - 6400 = 200  \n     - 2018-2019: 6800 - 6600 = 200  \n   - The average yearly increase is (100 + 300 + 200 + 200) / 4 = 200 units per year  \n\n3. extrapolation_tail: [&#x27;approximate contribution of Energy in 2020 based on the trend&#x27;]  \n   - Based on the calculated average yearly increase of 200 units, we can predict the contribution for 2020.  \n   - 2020 contribution \u2248 2019 contribution + average yearly increase  \n   - 2020 contribution \u2248 6800 + 200 = 7000 units  \n\nThe final answer is 7000 units.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1727,7 +1733,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The combined share of selected sectors with more than 20% is more than 60%?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;share of each sector&#x27;]  \n   - Technology: 60%\n   - Healthcare: 80%\n   - Finance: 75%\n   - Retail: 55%\n   - Education: 90%\n\n2. selection_1: [&#x27;sectors with more than 20&#x27;]  \n   - All sectors have shares greater than 20%, so all sectors are selected.\n\n3. calculation_2: [&#x27;combined share of selected sectors&#x27;]  \n   - Combined share = 60% + 80% + 75% + 55% + 90% = 360%\n\n4. compare_3: [&#x27;combined share 60&#x27;]  \n   - 360% is indeed greater than 60%.\n\n5. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;]  \n   - Since the combined share (360%) is greater than 60%, the statement is true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1756,7 +1762,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement &#x27;Port traffic has consistently increased every quarter&#x27; True or False?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;port traffic values for each quarter&#x27;]  \nThe port traffic values for each quarter are as follows: Q1: 150000 Tonnes, Q2: 155000 Tonnes, Q3: 160000 Tonnes, Q4: 165000 Tonnes.\n\n2. compare_1: [&#x27;check if each quarters value is greater than the previous quarters value&#x27;]  \n- Q2 &gt; Q1: 155000 &gt; 150000 \u2192 True  \n- Q3 &gt; Q2: 160000 &gt; 155000 \u2192 True  \n- Q4 &gt; Q3: 165000 &gt; 160000 \u2192 True  \n\n3. factchecking_tail: [&#x27;Given the findings from the previous steps is the statement true&#x27;]  \nSince each quarter&#x27;s port traffic value is greater than the previous quarter&#x27;s value, the statement holds true for all comparisons.\n\nThe final answer is True. The statement &#x27;Port traffic has consistently increased every quarter&#x27; is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1797,7 +1803,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement True or False that the average value of Synthesis Time is higher than the average value of Reactivity?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the average value of Synthesis Time and Reactivity:\n   - From the given data: `values = [85, 40, 65, 55, 75]` where the second value corresponds to \&quot;Synthesis Time\&quot; and the fourth value corresponds to \&quot;Reactivity\&quot;.\n   - Average value of Synthesis Time: 40\n   - Average value of Reactivity: 55\n\n2. compare the average values of Synthesis Time and Reactivity:\n   - Synthesis Time (40) is less than Reactivity (55).\n\n3. fact-checking: Given the finding from the previous step, is the statement true?\n   - The statement claims that the average value of Synthesis Time is higher than the average value of Reactivity.\n   - Based on our comparison, the statement is false since 40 is not higher than 55.\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1838,7 +1844,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the number of segments where Metric4 &gt; Metric1 + Metric2 in segment3?&quot;,
   &quot;Answer&quot;: &quot;1&quot;,
   &quot;Cleaned_answer&quot;: &quot;0&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the values for Metric4, Metric1, and Metric2 in segment3:  \n   - Metric4 value in segment3: 1350  \n   - Metric1 value in segment3: 950  \n   - Metric2 value in segment3: 1200  \n\n2. Calculate the sum of Metric1 and Metric2 in segment3:  \n   - Metric1 + Metric2 in segment3: 950 + 1200 = 2150  \n\n3. Compare Metric4 with the sum of Metric1 and Metric2 in segment3:  \n   - Metric4 (1350) is less than Metric1 + Metric2 (2150), so the condition is not met in segment3.  \n\n4. Count the number of segments meeting the condition Metric4 &gt; Metric1 + Metric2:  \n   - Since the condition is not met in segment3, the count is 0.  \n\nThe final answer is 0.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1897,7 +1903,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the number of segments where Metric3 &gt; Metric4?&quot;,
   &quot;Answer&quot;: &quot;0&quot;,
   &quot;Cleaned_answer&quot;: &quot;0&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. compare_1: [&#x27;Metric3  Metric4 for each segment&#x27;]\n- For segment1: Metric3 (1000) &lt; Metric4 (1500)\n- For segment2: Metric3 (1200) &lt; Metric4 (1400)\n- For segment3: Metric3 (1300) &lt; Metric4 (1350)\n- For segment4: Metric3 (1400) &lt; Metric4 (1450)\n- For segment5: Metric3 (1500) &lt; Metric4 (1600)\n\n2. count_tail: [&#x27;number of segments where Metric3  Metric4&#x27;]\n- From the comparison above, there are 0 segments where Metric3 &gt; Metric4.\n\nThe final answer is 0.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -1919,53 +1925,6 @@ function frameMove(elem, offset) {
     <img class="table0_column_column2" src="assets/table0/row000041_column2.png" alt="row000041_column2.png" />
   </td>
   <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">3</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;If Metric4 in segment4 is decreased by 200, what is the difference between the new value of Metric4 and Metric3 in segment4?&quot;,
-  &quot;Answer&quot;: &quot;None of the options&quot;,
-  &quot;Cleaned_answer&quot;: &quot;150&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What is the value of Metric4 in segment4?&quot;,
-    &quot;Answer&quot;: &quot;1600&quot;,
-    &quot;Cleaned_answer&quot;: &quot;1450&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the Metric3 value in segment4?&quot;,
-    &quot;Answer&quot;: &quot;1400&quot;,
-    &quot;Cleaned_answer&quot;: &quot;1400&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the new value of Metric4 after decreasing by 200?&quot;,
-    &quot;Answer&quot;: &quot;1250&quot;,
-    &quot;Cleaned_answer&quot;: &quot;1250&quot;,
-    &quot;Subquestion_type&quot;: &quot;calculation_1&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the difference between the new Metric4 value (after decreasing by 200) and the Metric3 value in segment4?&quot;,
-    &quot;Answer&quot;: &quot;50&quot;,
-    &quot;Cleaned_answer&quot;: &quot;50&quot;,
-    &quot;Subquestion_type&quot;: &quot;calculation_tail&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">33.png</pre>
-  </td>
-  <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000042_column2.png" alt="row000042_column2.png" />
-  </td>
-  <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
   </td>
   <td class="table0_td_column4">
@@ -1973,7 +1932,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the number of segments where the sum of Metric1 and Metric2 &gt; Metric3?&quot;,
   &quot;Answer&quot;: &quot;5&quot;,
   &quot;Cleaned_answer&quot;: &quot;5&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: \n   - sum of Metric1 and Metric2 for each segment: \n     - segment1: 750 + 900 = 1650\n     - segment2: 850 + 1100 = 1950\n     - segment3: 950 + 1200 = 2150\n     - segment4: 1000 + 1250 = 2250\n     - segment5: 1050 + 1300 = 2350\n   - value of Metric3 for each segment:\n     - segment1: 1000\n     - segment2: 1200\n     - segment3: 1300\n     - segment4: 1400\n     - segment5: 1500\n\n2. compare_1:\n   - sum of Metric1 and Metric2 &gt; Metric3 for each segment:\n     - segment1: 1650 &gt; 1000 (True)\n     - segment2: 1950 &gt; 1200 (True)\n     - segment3: 2150 &gt; 1300 (True)\n     - segment4: 2250 &gt; 1400 (True)\n     - segment5: 2350 &gt; 1500 (True)\n\n3. count_tail:\n   - number of segments where sum of Metric1 and Metric2 &gt; Metric3: 5\n\nThe final answer is 5.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2004,7 +1963,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">34.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000043_column2.png" alt="row000043_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000042_column2.png" alt="row000042_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2014,7 +1973,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the total usage of Industry and Transportation sectors, if Industry&#x27;s usage increases by 50%?&quot;,
   &quot;Answer&quot;: &quot;1.5I + Tr&quot;,
   &quot;Cleaned_answer&quot;: &quot;173&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;current usage of Industry sector&#x27;, &#x27;current usage of Transportation sector&#x27;]\n   - current usage of Industry sector: 75\n   - current usage of Transportation sector: 60\n\n2. calculation_1: [&#x27;increased usage of Industry sector by 50&#x27;]\n   - increased usage of Industry sector: 75 * (1 + 0.5) = 75 * 1.5 = 112.5\n\n3. calculation_tail: [&#x27;total usage of Industry and Transportation sectors after the increase&#x27;]\n   - total usage after increase: 112.5 + 60 = 172.5\n\nThe final answer is 172.5.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2051,7 +2010,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">34.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000044_column2.png" alt="row000044_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000043_column2.png" alt="row000043_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -2061,7 +2020,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: If Energy&#x27;s usage increases by 10%, the difference between Energy and Transportation sectors&#x27; usage will be greater than the current difference?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the current usage of Energy and Transportation sectors:  \n   - Current usage of Energy sector: 95  \n   - Current usage of Transportation sector: 60  \n\n2. Calculate the new usage of Energy sector after a 10% increase:  \n   - New usage of Energy sector: 95 * 1.10 = 104.5  \n\n3. Calculate the new difference between Energy and Transportation sectors&#x27; usage:  \n   - New difference: 104.5 - 60 = 44.5  \n\n4. Compare the new difference with the current difference:  \n   - Current difference: 95 - 60 = 35  \n   - New difference (44.5) is greater than the current difference (35)  \n\n5. Check if the statement is true based on the findings from the previous step:  \n   - The statement \&quot;If Energy&#x27;s usage increases by 10%, the difference between Energy and Transportation sectors&#x27; usage will be greater than the current difference\&quot; is True.  \n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2098,7 +2057,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">37.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000045_column2.png" alt="row000045_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000044_column2.png" alt="row000044_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -2108,7 +2067,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: if the Median value for Cybersecurity decreases by 10%, it will be less than the Min value for Cloud Computing?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Median value for Cybersecurity&#x27; is approximately 3000, &#x27;Min value for Cloud Computing&#x27; is approximately 1000]\n\n2. calculation_1: [&#x27;Median value after a 10% decrease&#x27; is 3000 - (3000 * 0.1) = 2700]\n\n3. compare_2: [&#x27;Decreased Median value 2700 &gt; Min value for Cloud Computing 1000&#x27;]\n\n4. factchecking_tail: [&#x27;Given the finding from the previous step, the statement is False&#x27;]\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2151,7 +2110,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">38.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000046_column2.png" alt="row000046_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000045_column2.png" alt="row000045_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2161,7 +2120,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;How many Studies Published would there be in 2021 if the ratio of Studies Published to Political Events remains constant as in 2020?&quot;,
   &quot;Answer&quot;: &quot;11.1&quot;,
   &quot;Cleaned_answer&quot;: &quot;11.1&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the number of Studies Published in 2020: 10  \n   Identify the number of Political Events in 2020: 45  \n   Identify the number of Political Events in 2021: 50  \n\n2. Calculate the ratio of Studies Published to Political Events in 2020: 10/45 \u2248 0.222  \n\n3. Determine the number of Studies Published in 2021 based on the ratio: 50 * 0.222 \u2248 11.1  \n\nThe final answer is approximately 11 Studies Published in 2021 if the ratio remains constant as in 2020.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2204,7 +2163,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">38.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000047_column2.png" alt="row000047_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000046_column2.png" alt="row000046_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -2214,7 +2173,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is the correct answer to the following question: if the difference between Political Events and Studies Published remains constant as in 2021, what would be the difference in 2022?&quot;,
   &quot;Answer&quot;: &quot;b) 38&quot;,
   &quot;Cleaned_answer&quot;: &quot;38&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the difference between Political Events and Studies Published in 2021: In 2021, Political Events were at 50 and Studies Published were at 12. The difference is 50 - 12 = 38.\n\n2. Apply the same difference to 2022 values: In 2022, Political Events were at 55 and Studies Published were at 15. If the difference remains constant as in 2021 (which is 38), then the difference in 2022 would also be 38.\n\nThe final answer is 38.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2233,7 +2192,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">39.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000048_column2.png" alt="row000048_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000047_column2.png" alt="row000047_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -2243,7 +2202,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is there an equal distribution of the increase among SmartGrid, MachineLearning, and CloudComputing?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;percentage increase of SmartGrid&#x27;, &#x27;percentage increase of MachineLearning&#x27;, &#x27;percentage increase of CloudComputing&#x27;]\n   - Percentage increase of SmartGrid: 21.9%\n   - Percentage increase of MachineLearning: 21.1%\n   - Percentage increase of CloudComputing: 20.9%\n\n2. compare_1: [&#x27;are the percentages equal&#x27;]\n   - The percentages are not exactly equal: 21.9% \u2260 21.1% \u2260 20.9%\n\n3. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;]\n   - Since the percentages are not exactly equal, the statement about equal distribution is false.\n\nThe final answer is no, there is not an equal distribution of the increase among SmartGrid, MachineLearning, and CloudComputing.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2286,7 +2245,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">39.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000049_column2.png" alt="row000049_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000048_column2.png" alt="row000048_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -2296,7 +2255,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The combined percentage of CloudComputing and MachineLearning is more than 40%?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identify the percentage of CloudComputing: 20.9%  \n   identify the percentage of MachineLearning: 21.1%  \n2. calculate the sum of both percentages: 20.9% + 21.1% = 42.0%  \n3. compare the sum to 40: 42.0% &gt; 40  \n4. fact-check if the statement is true based on the comparison: The combined percentage (42.0%) is indeed more than 40%  \n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2339,7 +2298,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">42.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000050_column2.png" alt="row000050_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000049_column2.png" alt="row000049_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -2349,7 +2308,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If we consider only categories where Line Data 2 is lower than 40, what is the difference between the highest and lowest bar values?&quot;,
   &quot;Answer&quot;: &quot;10&quot;,
   &quot;Cleaned_answer&quot;: &quot;10&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;categories where Line Data 2 &lt; 40&#x27;, &#x27;Bar Values in those categories&#x27;]\n   - Categories where Line Data 2 is lower than 40: Transportation (value ~20), Water Usage (value ~35)\n   - Bar Values in these categories: Transportation (50), Water Usage (60)\n\n2. compare_1: [&#x27;find the highest and lowest Bar Values&#x27;]\n   - Highest Bar Value among selected categories: Water Usage (60)\n   - Lowest Bar Value among selected categories: Transportation (50)\n\n3. calculation_tail: [&#x27;difference between the highest and lowest Bar Values&#x27;]\n   - Difference between highest and lowest Bar Values: 60 - 50 = 10\n\nThe final answer is 10.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2386,7 +2345,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">43.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000051_column2.png" alt="row000051_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000050_column2.png" alt="row000050_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2396,7 +2355,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: the combined percentage of Healthcare and Insurance frauds increases after swapping their percentages?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identify the current combined percentage of Healthcare and Insurance frauds: 5.0% + 10.0% = 15.0%  \n2. calculate the combined percentage of Healthcare and Insurance frauds after swapping: 10.0% + 5.0% = 15.0%  \n3. compare the two combined percentages: 15.0% (before) = 15.0% (after)  \n4. fact-checking the given statement: Since the combined percentage remains unchanged at 15.0%, the statement is false.  \nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2433,7 +2392,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">43.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000052_column2.png" alt="row000052_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000051_column2.png" alt="row000051_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -2443,7 +2402,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the total fraud percentage is assumed to be 100%, what is the difference between the sum of the new combined percentage of Healthcare and Insurance frauds and the original combined percentage after swapping?&quot;,
   &quot;Answer&quot;: &quot;0.0%&quot;,
   &quot;Cleaned_answer&quot;: &quot;0&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the original combined percentage of Healthcare and Insurance frauds: 5.0% (Healthcare) + 10.0% (Insurance) = 15.0%\n\n2. Identify the new combined percentage of Healthcare and Insurance frauds after swapping: Since there is no mention of swapping values in the given data, the new combined percentage remains the same as the original: 15.0%\n\n3. Calculate the difference between the new and original combined percentages: 15.0% - 15.0% = 0.0%\n\nThe final answer is 0.0%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2474,7 +2433,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">43.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000053_column2.png" alt="row000053_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000052_column2.png" alt="row000052_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -2484,7 +2443,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the new percentage of Identity Theft fraud if the total fraud percentage is adjusted to 90%?&quot;,
   &quot;Answer&quot;: &quot;22.5%&quot;,
   &quot;Cleaned_answer&quot;: &quot;22.5&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: current percentage of Identity Theft fraud: 25.0%  \n   identification: current total fraud percentage: 100%\n\n2. calculation_simple: new percentage of Identity Theft based on adjusted total fraud percentage: (25.0 / 100) * 90 = 22.5%\n\nThe final answer is 22.5%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2515,7 +2474,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">44.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000054_column2.png" alt="row000054_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000053_column2.png" alt="row000053_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -2525,7 +2484,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The percentage for Energy is greater than the sum of the percentages for Agriculture and Technology?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;percentage for Energy&#x27; = 90, &#x27;percentage for Agriculture&#x27; = 40, &#x27;percentage for Technology&#x27; = 70]\n\n2. calculation_1: [&#x27;sum of the percentages for Agriculture and Technology&#x27; = 40 + 70 = 110]\n\n3. compare_2: [&#x27;percentage for Energy vs sum of Agriculture and Technology&#x27;: 90 &lt; 110]\n\n4. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;: False]\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2568,7 +2527,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">45.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000055_column2.png" alt="row000055_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000054_column2.png" alt="row000054_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -2578,7 +2537,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the sum of the percentages for skills with over 30%?&quot;,
   &quot;Answer&quot;: &quot;85.1%&quot;,
   &quot;Cleaned_answer&quot;: &quot;85.1&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. Identify the percentages for skills with over 30%: From the pie chart, the skills and their percentages are &#x27;Pragmatic Skills&#x27; (44.4%) and &#x27;Semantic Processing&#x27; (40.7%), both exceeding 30%.  \n2. Calculate the sum of identified percentages: Summing 44.4% and 40.7% gives 85.1%.  \nThe final answer is 85.1%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2603,7 +2562,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">45.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000056_column2.png" alt="row000056_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000055_column2.png" alt="row000055_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2613,7 +2572,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between the lowest percentage and the average of the other two?&quot;,
   &quot;Answer&quot;: &quot;27.75%&quot;,
   &quot;Cleaned_answer&quot;: &quot;27.75&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: The lowest percentage is 14.8%, and the other two percentages are 44.4% and 40.7%.\n\n2. calculation_1: The average of the other two percentages is (44.4% + 40.7%) / 2 = 42.55%.\n\n3. calculation_tail: The difference between the lowest percentage and the calculated average is 42.55% - 14.8% = 27.75%.\n\nThe final answer is 27.75%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2650,7 +2609,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">45.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000057_column2.png" alt="row000057_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000056_column2.png" alt="row000056_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -2660,7 +2619,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What fraction of the total does the highest percentage represent?&quot;,
   &quot;Answer&quot;: &quot;0.444&quot;,
   &quot;Cleaned_answer&quot;: &quot;0.444&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. Identify the highest percentage in the pie chart: 44.4%\n2. Convert the highest percentage to a fraction of the total: 44.4% = 44.4/100 = 0.444  \nThe final answer is 0.444.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2685,7 +2644,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">45.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000058_column2.png" alt="row000058_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000057_column2.png" alt="row000057_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -2695,7 +2654,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If Semantic Processing is compared to Morphological Awareness, what is the ratio of their percentages?&quot;,
   &quot;Answer&quot;: &quot;a) 2.75&quot;,
   &quot;Cleaned_answer&quot;: &quot;2.75&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification:  \n   - percentage of Semantic Processing: 40.7%  \n   - percentage of Morphological Awareness: 14.8%  \n\n2. calculation_simple:  \n   - ratio of Semantic Processing to Morphological Awareness: 40.7 / 14.8 \u2248 2.75  \n\nThe final answer is 2.75.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2720,7 +2679,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">46.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000059_column2.png" alt="row000059_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000058_column2.png" alt="row000058_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2730,7 +2689,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Will the energy produced surpass 220 kWh during the evening if the solar radiation in RegionB increases by 10%?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification:  \n   - current solar radiation in RegionB: 550 W/m\u00b2  \n   - current energy production during the evening: 100 kWh  \n\n2. calculation_1:  \n   - increased solar radiation by 10%: 550 * 1.10 = 605 W/m\u00b2  \n\n3. calculation_2:  \n   - projected energy production with increased solar radiation: Assuming a linear relationship between solar radiation and energy production, the increase in energy production can be calculated as follows:  \n     Current ratio of solar radiation to energy production: 550 W/m\u00b2 \u2192 100 kWh  \n     Increase factor: (605/550) = 1.1  \n     Projected energy production: 100 kWh * 1.1 = 110 kWh  \n\n4. compare_tail:  \n   - will the projected energy production surpass 220 kWh: 110 kWh does not surpass 220 kWh  \n\nThe final answer is No, the energy produced will not surpass 220 kWh during the evening if the solar radiation in RegionB increases by 10%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2773,7 +2732,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">47.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000060_column2.png" alt="row000060_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000059_column2.png" alt="row000059_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2783,7 +2742,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement True or False: the Q1 value of Product_B is higher than the Max value of Product_A?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification:  \n   - Q1 value of Product_B: 2000  \n   - Max value of Product_A: 1200  \n\n2. compare_1:  \n   - Compare Q1 of Product_B (2000) and Max of Product_A (1200): 2000 &gt; 1200  \n\n3. factchecking_tail:  \n   - Given the finding from the previous step, the statement \&quot;the Q1 value of Product_B is higher than the Max value of Product_A\&quot; is true.  \n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2814,7 +2773,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">53.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000061_column2.png" alt="row000061_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000060_column2.png" alt="row000060_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -2824,7 +2783,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: the difference between the highest and lowest sales from Q1 in Year 1, Q2 in Year 2, and Q3 in Year 3 is greater than 50?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identify the sales data for Q1 in Year 1, Q2 in Year 2, and Q3 in Year 3:  \n   - Q1 in Year 1: 200  \n   - Q2 in Year 2: 320  \n   - Q3 in Year 3: 430  \n\n2. find the highest and lowest sales among the identified quarters:  \n   - Highest sales: 430 (Q3 in Year 3)  \n   - Lowest sales: 200 (Q1 in Year 1)  \n\n3. calculate the difference between the highest and lowest sales:  \n   - Difference: 430 - 200 = 230  \n\n4. compare if the calculated difference is greater than 50:  \n   - 230 &gt; 50  \n\n5. fact-checking: Given the finding from the previous step, the statement is true.  \n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2861,7 +2820,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">54.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000062_column2.png" alt="row000062_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000061_column2.png" alt="row000061_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -2871,7 +2830,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement True or False: the sum of the first characters of Galaxy Luminosity, Dark Matter Density, and Astrophysical Parameters equals &#x27;GDA&#x27;?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;First character of Galaxy Luminosity&#x27; is &#x27;G&#x27;, &#x27;First character of Dark Matter Density&#x27; is &#x27;D&#x27;, &#x27;First character of Astrophysical Parameters&#x27; is &#x27;A&#x27;]  \n2. compare_1: [&#x27;Concatenation of these characters is &#x27;GDA&#x27;]  \n3. factchecking_tail: [&#x27;Given the finding from the previous step, the statement is true&#x27;]  \n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2914,7 +2873,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">54.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000063_column2.png" alt="row000063_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000062_column2.png" alt="row000062_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -2924,7 +2883,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the multi-character string formed by the first characters of Black Hole Mass, Star Formation Rate, and Cosmic Microwave Background is used, what is the resulting string?&quot;,
   &quot;Answer&quot;: &quot;a) BSC&quot;,
   &quot;Cleaned_answer&quot;: &quot;BSC&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identify the first character of Black Hole Mass: B  \n2. identify the first character of Star Formation Rate: S  \n3. identify the first character of Cosmic Microwave Background: C  \n4. form the resulting string from identified characters: BSC  \nThe final answer is BSC.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -2961,7 +2920,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">54.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000064_column2.png" alt="row000064_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000063_column2.png" alt="row000063_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -2971,7 +2930,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the multi-character string formed by the first characters of Galaxy Luminosity, Dark Matter Density, and Star Formation Rate is reversed, what is the resulting string?&quot;,
   &quot;Answer&quot;: &quot;SDG&quot;,
   &quot;Cleaned_answer&quot;: &quot;SDG&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the first character of each specified label:  \n   - First character of &#x27;Galaxy Luminosity&#x27;: &#x27;G&#x27;  \n   - First character of &#x27;Dark Matter Density&#x27;: &#x27;D&#x27;  \n   - First character of &#x27;Star Formation Rate&#x27;: &#x27;S&#x27;\n\n2. form a multicharacter string using identified characters:  \n   The string formed is &#x27;GDS&#x27;\n\n3. reverse the resulting string:  \n   Reversing &#x27;GDS&#x27; results in &#x27;SDG&#x27;\n\nThe final answer is &#x27;SDG&#x27;.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3014,7 +2973,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">55.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000065_column2.png" alt="row000065_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000064_column2.png" alt="row000064_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -3024,7 +2983,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Project the case analysis time percentage for June if it follows the average trend of January, February, and March.&quot;,
   &quot;Answer&quot;: &quot;18.67%&quot;,
   &quot;Cleaned_answer&quot;: &quot;18.67&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;case analysis time percentage for January&#x27;: 18.7%, &#x27;case analysis time percentage for February&#x27;: 17.1%, &#x27;case analysis time percentage for March&#x27;: 20.2%]\n\n2. calculation_1: [&#x27;average of these three percentages&#x27;]  \n   Average = (18.7% + 17.1% + 20.2%) / 3 = 56% / 3 = 18.67%\n\n3. projection_tail: [&#x27;apply this average to June&#x27;]  \n   If June follows the same trend as the average of January, February, and March, its projected percentage would be 18.67%.\n\nThe final answer is 18.67%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3067,7 +3026,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">55.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000066_column2.png" alt="row000066_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000065_column2.png" alt="row000065_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -3077,7 +3036,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The case analysis time percentage for May is significantly higher than for January?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;case analysis time percentage for May&#x27; is 22.6%, &#x27;case analysis time percentage for January&#x27; is 18.7%]  \n2. compare_1: [&#x27;May&#x27;s percentage 22.6%&#x27; is greater than &#x27;January&#x27;s percentage 18.7%&#x27;]  \n3. factchecking_tail: [&#x27;Given the finding from the previous step, the statement \&quot;The case analysis time percentage for May is significantly higher than for January\&quot; is true&#x27;]\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3114,7 +3073,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">56.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000067_column2.png" alt="row000067_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000066_column2.png" alt="row000066_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -3124,7 +3083,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The sum of Research Funding and Production Cost is greater than the value of Revenue?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the value of Research Funding, value of Production Cost, and value of Revenue:  \n   - value of Research Funding: 120  \n   - value of Production Cost: 75  \n   - value of Revenue: 200  \n\n2. calculate the sum of Research Funding and Production Cost:  \n   - sum of Research Funding and Production Cost: 120 + 75 = 195  \n\n3. compare the sum of Research Funding and Production Cost with the value of Revenue:  \n   - sum vs value of Revenue: 195 &lt; 200  \n\n4. fact-check the statement based on the comparison result:  \n   - Given the finding from the previous step, the statement is False  \n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3167,7 +3126,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">57.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000068_column2.png" alt="row000068_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000067_column2.png" alt="row000067_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -3177,7 +3136,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: the highest value in Finance is more than twice the highest value in E-Commerce?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;highest value in Finance&#x27;, &#x27;highest value in E-Commerce&#x27;]  \n   - The highest value in Finance is approximately 20000.  \n   - The highest value in E-Commerce is approximately 15000.\n\n2. compare_1: [&#x27;highest value in Finance  2  highest value in ECommerce&#x27;]  \n   - 20000 is compared to 15000.  \n   - Twice the highest value in E-Commerce is 2 * 15000 = 30000.\n\n3. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;]  \n   - Since 20000 is less than 30000, the statement \&quot;the highest value in Finance is more than twice the highest value in E-Commerce\&quot; is false.\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3211,6 +3170,41 @@ function frameMove(elem, offset) {
 </tr>
 <tr>
   <td class="table0_td_column1">
+    <pre class="table0_column_column1" style="">58.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000068_column2.png" alt="row000068_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3" style="">4</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4" style="">{
+  &quot;ComplexQ&quot;: &quot;Find the correct answer among the options for the new ratio of Renewable Energy Share to CO2 Emissions, if Renewable Energy Share increased from 5% to 15% while CO2 Emissions decreased from 3000 Mt to 1000 Mt. a) 0.005 b) 0.05 c) 0.5 d) 5&quot;,
+  &quot;Answer&quot;: &quot;b) 0.05&quot;,
+  &quot;Cleaned_answer&quot;: &quot;0.05&quot;,
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the new values for Renewable Energy Share and CO2 Emissions: New Renewable Energy Share is 15%, and New CO2 Emissions is 1000 Mt.\n\n2. Calculate the ratio of New Renewable Energy Share to New CO2 Emissions: Ratio = New Renewable Energy Share / New CO2 Emissions = 15 / 1000 = 0.015.\n\n3. Compare the calculated ratio with the given options: None of the provided options match the calculated ratio of 0.015. However, the closest option is b) 0.05, which could be a rounding error or approximation.\n\nThe final answer is b) 0.05.&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5" style="">[
+  {
+    &quot;Question&quot;: &quot;What are the new CO2 emissions values shown on the chart?&quot;,
+    &quot;Answer&quot;: &quot;unanswerable&quot;,
+    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the ratio of the new renewable energy share to the new CO2 emissions as depicted in the chart?&quot;,
+    &quot;Answer&quot;: &quot;unanswerable&quot;,
+    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
+    &quot;Subquestion_type&quot;: &quot;calculation_simple&quot;
+  }
+]</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
     <pre class="table0_column_column1" style="">59.png</pre>
   </td>
   <td class="table0_td_column2">
@@ -3224,7 +3218,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: the difference between Demand Response and Resource Usage is greater than half of the maximum value of the scale?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identify the values: [&#x27;value of Demand Response&#x27; is 60, &#x27;value of Resource Usage&#x27; is 40, &#x27;maximum value of the scale&#x27; is 70]\n2. calculate the difference: [&#x27;difference between Demand Response and Resource Usage&#x27; is 60 - 40 = 20]\n3. calculate half of the maximum value: [&#x27;half of the maximum value of the scale&#x27; is 70 / 2 = 35]\n4. compare the two results: [&#x27;is the difference greater than half of the maximum value of the scale&#x27; is 20 &gt; 35 -&gt; False]\n5. fact-check the statement: [&#x27;Given the finding from the previous step, the statement is False&#x27;]\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3289,7 +3283,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the increase across Experiment2 and Test2 equally distributed from Sample 0 to Sample 1?&quot;,
   &quot;Answer&quot;: &quot;b- False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: values of Experiment2 from Sample 0 to Sample 1: [600, 420]  \n   values of Test2 from Sample 0 to Sample 1: [78, 85]\n\n2. compare_1: check if the increase between samples is equal for both Experiment2 and Test2:  \n   For Experiment2, the change is 420 - 600 = -180.  \n   For Test2, the change is 85 - 78 = 7.  \n   The changes are not equal; Experiment2 decreases while Test2 increases.\n\n3. factchecking_tail: Given the findings is the increase equally distributed: No, the changes are different; Experiment2 shows a decrease, and Test2 shows an increase.\n\nThe final answer is no, the increase across Experiment2 and Test2 is not equally distributed from Sample 0 to Sample 1.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3336,7 +3330,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the product of the ratio of the interquartile ranges of StockB and StockC and the minimum value of StockA?&quot;,
   &quot;Answer&quot;: &quot;1000&quot;,
   &quot;Cleaned_answer&quot;: &quot;1000&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the interquartile range of StockB: The IQR of StockB is approximately 1700 - 1500 = 200.  \n   identify the interquartile range of StockC: The IQR of StockC is approximately 2200 - 2000 = 200.  \n   identify the minimum value of StockA: The minimum value of StockA is approximately 1000.\n\n2. calculate the ratio of StockB&#x27;s IQR to StockC&#x27;s IQR: The ratio is 200 / 200 = 1.\n\n3. calculate the product of the ratio and the minimum value of StockA: The product is 1 * 1000 = 1000.\n\nThe final answer is 1000.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3389,7 +3383,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False? The sum of the difference between the median values of StockC and the Monthly Fish Harvest in April and the minimum value of StockA is greater than 2000?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the median value of StockC in April: There is no data for StockC in April in the provided box plot. Hence, this value cannot be determined from the image.\n2. Identify the median value of Monthly Fish Harvest in April: The median value is approximately 1150.\n3. Identify the minimum value of StockA: The minimum value of StockA is approximately 1000.\n4. Determine the difference between these two medians: Since there is no median value for StockC in April, we cannot calculate the difference.\n5. Calculate the sum of the difference and the minimum value of StockA: Due to the absence of the median value for StockC in April, this calculation cannot be performed.\n6. Compare if this sum is greater than 2000: Since the sum cannot be calculated, this comparison cannot be made.\n7. Given the finding from the previous step, is the statement true: The statement cannot be verified due to insufficient data.\n\nThe final answer is False, as the necessary data to validate the statement is missing.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3442,7 +3436,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The heart rate in March was lower than the heart rate in February?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;heart rate in March&#x27; is 70 bpm, &#x27;heart rate in February&#x27; is 75 bpm]\n\n2. compare_1: [&#x27;heart rate in March (70 bpm)&#x27; is less than &#x27;heart rate in February (75 bpm)&#x27;]\n\n3. factchecking_tail: [&#x27;Given the finding from the previous step, the statement \&quot;The heart rate in March was lower than the heart rate in February\&quot; is true&#x27;]\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3489,7 +3483,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Evaluate whether the new Median value of Level Sensor, increased by 50%, exceeds the Q1 value of Temperature Sensor?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the Median value of Level Sensor and Q1 value of Temperature Sensor:  \n   - Median value of Level Sensor: 1300  \n   - Q1 value of Temperature Sensor: 600  \n\n2. Increase the Median value of Level Sensor by 50%:  \n   - Increased Median value = 1300 * (1 + 0.50) = 1300 * 1.50 = 1950  \n\n3. Compare the increased Median value with the Q1 value of Temperature Sensor:  \n   - Increased Median value of Level Sensor (1950) &gt; Q1 value of Temperature Sensor (600)  \n\nThe final answer is Yes, the new Median value of Level Sensor, increased by 50%, exceeds the Q1 value of Temperature Sensor.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3530,7 +3524,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the difference between the Median value of Pressure Gauge and the Q3 value of Level Sensor is added to Flow Meter&#x27;s Max value, what is the result?&quot;,
   &quot;Answer&quot;: &quot;3100&quot;,
   &quot;Cleaned_answer&quot;: &quot;3100&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification:  \n   - Median value of Pressure Gauge: 2000  \n   - Q3 value of Level Sensor: 1900  \n   - Max value of Flow Meter: 3000  \n\n2. calculation_simple:  \n   - Calculate the difference between the Median value of Pressure Gauge and the Q3 value of Level Sensor: 2000 - 1900 = 100  \n\n3. Determine the final result by adding the calculated difference to Flow Meter&#x27;s Max value: 100 + 3000 = 3100\n\nThe final answer is 3100.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3577,7 +3571,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Will the new Corporate percentage surpass the Simulation percentage in VR Application Areas, assuming the percentage for Corporate is swapped with the percentage for Gaming?&quot;,
   &quot;Answer&quot;: &quot;a- Yes&quot;,
   &quot;Cleaned_answer&quot;: &quot;Yes&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the percentages: \n   - Corporate percentage in VR Training Distribution: 12.5%\n   - Gaming percentage in VR Training Distribution: 37.5%\n   - Simulation percentage in VR Application Areas: 19.0%\n\n2. Compare the swapped Corporate percentage with the Simulation percentage:\n   - After swapping, the new Corporate percentage will be the original Gaming percentage, which is 37.5%.\n   - Compare this with the Simulation percentage: 37.5% &gt; 19.0%\n\n3. Fact-check if the swapped Corporate percentage surpasses the Simulation percentage:\n   - Since 37.5% is indeed greater than 19.0%, the new Corporate percentage will surpass the Simulation percentage.\n\nThe final answer is yes, the new Corporate percentage will surpass the Simulation percentage in VR Application Areas after swapping.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3618,7 +3612,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: the new Entertainment percentage will be greater than the Education percentage in VR Application Areas, assuming the percentage for Entertainment is swapped with the percentage for Training?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Entertainment percentage in VR Application Areas&#x27;: 19.0%, &#x27;Training percentage in VR Application Areas&#x27;: 29.2%, &#x27;Education percentage in VR Application Areas&#x27;: 23.8%]\n\n2. compare_1: [&#x27;swapped Entertainment percentage  Education percentage&#x27;] - After swapping the Entertainment percentage (19.0%) with the Training percentage (29.2%), the new Entertainment percentage becomes 29.2%. We then compare this with the original Education percentage (23.8%).\n\n3. fact checking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;] - Since 29.2% (new Entertainment percentage) is greater than 23.8% (Education percentage), the statement is true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3665,7 +3659,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the precipitation on 01-01 12 increased by 1 mm, what would be the new total precipitation amount on that day?&quot;,
   &quot;Answer&quot;: &quot;4 mm&quot;,
   &quot;Cleaned_answer&quot;: &quot;4&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;precipitation amount on 0101 12&#x27;] - From the CSV data, the precipitation amount on 2023-01-01 is 3 mm.  \n2. calculation_simple: [&#x27;new total precipitation amount after adding 1 mm&#x27;] - Adding 1 mm to the existing 3 mm results in 4 mm.  \nThe final answer is 4 mm.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3687,10 +3681,51 @@ function frameMove(elem, offset) {
 </tr>
 <tr>
   <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">69.png</pre>
+    <pre class="table0_column_column1" style="">67.png</pre>
   </td>
   <td class="table0_td_column2">
     <img class="table0_column_column2" src="assets/table0/row000079_column2.png" alt="row000079_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3" style="">3</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4" style="">{
+  &quot;ComplexQ&quot;: &quot;If the temperature on 01-03 12 increased by 1 degree Celsius, what would be the difference between the new temperature and the temperature on 01-04 00?&quot;,
+  &quot;Answer&quot;: &quot;1 degree Celsius&quot;,
+  &quot;Cleaned_answer&quot;: &quot;3&quot;,
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;temperature on 0103 12&#x27;, &#x27;temperature on 0104 00&#x27;]  \n   - temperature on 01-03 12 is 4\u00b0C  \n   - temperature on 01-04 00 is 8\u00b0C  \n\n2. calculation_1: [&#x27;new temperature after increasing by 1 degree Celsius&#x27;]  \n   - new temperature after increasing 4\u00b0C by 1 degree Celsius is 5\u00b0C  \n\n3. calculation_tail: [&#x27;difference between the new temperature and temperature on 0104 00&#x27;]  \n   - difference between the new temperature (5\u00b0C) and temperature on 01-04 00 (8\u00b0C) is 8\u00b0C - 5\u00b0C = 3\u00b0C  \n\nThe final answer is 3\u00b0C.&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5" style="">[
+  {
+    &quot;Question&quot;: &quot;What is the temperature on 01-03 12?&quot;,
+    &quot;Answer&quot;: &quot;6&quot;,
+    &quot;Cleaned_answer&quot;: &quot;4&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the temperature on 01-04 00?&quot;,
+    &quot;Answer&quot;: &quot;8&quot;,
+    &quot;Cleaned_answer&quot;: &quot;8&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What would be the new temperature after increasing the temperature recorded on 01-03 12 by 1 degree Celsius?&quot;,
+    &quot;Answer&quot;: &quot;unanswerable&quot;,
+    &quot;Cleaned_answer&quot;: &quot;5&quot;,
+    &quot;Subquestion_type&quot;: &quot;calculation_1&quot;
+  }
+]</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1" style="">69.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000080_column2.png" alt="row000080_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -3700,7 +3735,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement true or false: The sum of Grover&#x27;s Search and Quantum Fourier Transform&#x27;s shares is greater than the share of Quantum Teleportation?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Grovers Search share&#x27;: 95.4%, &#x27;Quantum Fourier Transform share&#x27;: 92.5%, &#x27;Quantum Teleportation share&#x27;: 99.8%]\n\n2. calculation_1: [&#x27;sum of Grovers Search and Quantum Fourier Transform shares&#x27;: 95.4% + 92.5% = 187.9%]\n\n3. compare_2: [&#x27;sum vs Quantum Teleportation share&#x27;: 187.9% &gt; 99.8%]\n\n4. factchecking_tail: [&#x27;is the statement true&#x27;]: Since 187.9% is indeed greater than 99.8%, the statement is true.\n\nThe final answer is true.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3731,7 +3766,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">70.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000080_column2.png" alt="row000080_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000081_column2.png" alt="row000081_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -3741,7 +3776,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between the Q1 and Q3 activities on Reddit?&quot;,
   &quot;Answer&quot;: &quot;2000 units&quot;,
   &quot;Cleaned_answer&quot;: &quot;2000&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Q1 activity on Reddit&#x27;, &#x27;Q3 activity on Reddit&#x27;]  \n   - From the data, Q1 activity on Reddit is 500.\n   - From the data, Q3 activity on Reddit is 2500.\n\n2. calculation_simple: [&#x27;difference between Q1 and Q3 activities&#x27;]  \n   - The difference between Q1 and Q3 activities on Reddit is 2500 - 500 = 2000.\n\nThe final answer is 2000.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3772,7 +3807,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">71.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000081_column2.png" alt="row000081_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000082_column2.png" alt="row000082_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -3782,7 +3817,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is the correct answer to the following question: Choose the correct option from the given choices for ranking U-Net, SegNet, and FCN by accuracy in ascending order: a) SegNet, FCN, U-Net, b) SegNet, U-Net, FCN, c) U-Net, SegNet, FCN, d) U-Net, FCN, SegNet?&quot;,
   &quot;Answer&quot;: &quot;b) SegNet, U-Net, FCN&quot;,
   &quot;Cleaned_answer&quot;: &quot;b) SegNet, U-Net, FCN&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the accuracy values from the chart:\n   - Accuracy of SegNet: Approximately 85%\n   - Accuracy of FCN: Approximately 88%\n   - Accuracy of U-Net: Approximately 87%\n\n2. Rank the algorithms by their accuracy in ascending order:\n   - SegNet (85%) &lt; U-Net (87%) &lt; FCN (88%)\n\n3. Match the ranking result with the given options:\n   - Option a) SegNet, FCN, U-Net -&gt; Incorrect (FCN is higher than U-Net)\n   - Option b) SegNet, U-Net, FCN -&gt; Correct (matches the ranking)\n   - Option c) U-Net, SegNet, FCN -&gt; Incorrect (SegNet is lower than U-Net)\n   - Option d) U-Net, FCN, SegNet -&gt; Incorrect (SegNet is the lowest)\n\nThe final answer is b) SegNet, U-Net, FCN.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3825,7 +3860,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">71.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000082_column2.png" alt="row000082_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000083_column2.png" alt="row000083_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -3835,7 +3870,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement True or False: Mask R-CNN has the highest accuracy among DeepLabV3, PSPNet, and Mask R-CNN?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the accuracy of Mask R-CNN, DeepLabV3, and PSPNet:  \n   - accuracy of Mask R-CNN: 94%  \n   - accuracy of DeepLabV3: 92%  \n   - accuracy of PSPNet: 90%\n\n2. compare which one has the highest accuracy:  \n   - Among Mask R-CNN (94%), DeepLabV3 (92%), and PSPNet (90%), Mask R-CNN has the highest accuracy.\n\n3. fact-checking if the statement \&quot;Mask R-CNN has the highest accuracy among DeepLabV3, PSPNet, and Mask R-CNN\&quot; is true:  \n   - Based on the comparison, Mask R-CNN indeed has the highest accuracy among the three algorithms mentioned.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3878,7 +3913,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">72.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000083_column2.png" alt="row000083_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000084_column2.png" alt="row000084_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -3888,7 +3923,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the revenue percentage for Q1 in the next year is predicted to continue the same trend as the current Q1 values, what is the projected profit percentage for Q1 in the next year based on the current trend?&quot;,
   &quot;Answer&quot;: &quot;a) 14.3%&quot;,
   &quot;Cleaned_answer&quot;: &quot;14.3&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;current Q1 revenue percentage&#x27;, &#x27;current Q1 profit percentage&#x27;]\n   - The current Q1 revenue percentage is 19.2%.\n   - The current Q1 profit percentage is 14.3%.\n\n2. trendanalysis_1: [&#x27;continue the trend of Q1 values&#x27;]\n   - The trend analysis assumes that the revenue and profit percentages for Q1 will remain constant at their current values if no other factors change.\n\n3. projection_tail: [&#x27;calculate the projected Q1 profit percentage for the next year based on the trend&#x27;]\n   - Since the trend continues and the current Q1 profit percentage is 14.3%, the projected Q1 profit percentage for the next year would also be 14.3%.\n\nThe final answer is 14.3%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3925,7 +3960,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">73.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000084_column2.png" alt="row000084_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000085_column2.png" alt="row000085_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -3935,7 +3970,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: if the number of buses in the month with the highest number of buses decreases by 10, the difference between the highest and second-highest bus counts would be less than 5?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;highest number of buses in any month&#x27;, &#x27;secondhighest number of buses in any month&#x27;]  \n   From the data provided:  \n   - Highest number of buses: 60 in May  \n   - Second-highest number of buses: 57 in April  \n\n2. calculation_1: [&#x27;difference after decreasing the highest count by 10&#x27;]  \n   - New highest count: 60 - 10 = 50  \n   - Difference between new highest and second-highest: 50 - 57 = -7  \n\n3. compare_2: [&#x27;new difference 5&#x27;]  \n   - The new difference (-7) is not less than 5 since negative numbers are less than positive numbers. Thus, |-7| &gt; 5  \n\n4. factchecking_tail: [&#x27;Given the finding from the previous steps is the statement true&#x27;]  \n   - Based on the calculations, the difference after decreasing the highest bus count by 10 is not less than 5. Therefore, the statement is false.\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -3978,7 +4013,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">76.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000085_column2.png" alt="row000085_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000086_column2.png" alt="row000086_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -3988,7 +4023,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If we assume the trend continues, what would be the frequency of music Group 3 at sample 5?&quot;,
   &quot;Answer&quot;: &quot;20000 Hz&quot;,
   &quot;Cleaned_answer&quot;: &quot;20480&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: The trend of music Group 3&#x27;s frequency over samples appears to be linear. The frequency increases consistently as the sample number increases. Specifically, the frequencies at samples 1, 2, 3, and 4 are 4096 Hz, 8192 Hz, 12288 Hz, and 16384 Hz respectively. This indicates a constant increase of 4096 Hz per sample.\n\n2. extrapolation_simple: Based on the identified linear trend, we can predict the frequency at sample 5. Since the frequency increases by 4096 Hz for each sample increment, the frequency at sample 5 would be 16384 Hz (from sample 4) + 4096 Hz = 20480 Hz.\n\nThe final answer is 20480 Hz.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4013,7 +4048,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">77.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000086_column2.png" alt="row000086_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000087_column2.png" alt="row000087_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -4023,7 +4058,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the arrow starting at (4, -4) continues in the same direction for another unit length, what is the approximate endpoint? a) (5, -3) b) (3, -5) c) (6, -2) d) (5, -5)&quot;,
   &quot;Answer&quot;: &quot;a) (5, -3)&quot;,
   &quot;Cleaned_answer&quot;: &quot;(5, -3)&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the direction and length of the arrow starting at (4, -4):  \n   From the quiver plot, the arrow at point (4, -4) is pointing towards the top-right. Specifically, it appears to have a slope that is approximately 1 (meaning for every unit increase in x, there is an approximately equal increase in y). \n\n2. Calculate the new endpoint based on the identified direction and additional unit length:  \n   Since the arrow has a slope of about 1, moving one unit in the direction of the arrow would mean moving one unit to the right and one unit up. Thus, adding these changes to the starting point (4, -4), the new endpoint would be (4+1, -4+1) which simplifies to (5, -3).\n\n3. Determine the approximate endpoint when the arrow continues for another unit length:  \n   Based on the calculations above, the approximate endpoint is (5, -3). Comparing this to the given options, the correct answer is a) (5, -3).\n\nThe final answer is (5, -3).&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4048,7 +4083,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">78.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000087_column2.png" alt="row000087_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000088_column2.png" alt="row000088_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -4058,7 +4093,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: the Water Supply Efficiency has been consistently higher than the Bridge Condition Rating throughout the year?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. **Identification**:  \n   - Water Supply Efficiency trend throughout the year: It starts at 92 in January, peaks at 95 in March, dips slightly to 93 in April and May, then increases again to 95 in June and finally reaches 92 in July.  \n   - Bridge Condition Rating trend throughout the year: It starts at 78 in January, increases to 80 in February, further rises to 82 in March, dips slightly to 81 in April, increases again to 83 in May, then goes up to 84 in June and finally reaches 85 in July.\n\n2. **Compare_1**:  \n   - Water Supply Efficiency vs Bridge Condition Rating every month: In all months (January to July), the Water Supply Efficiency values are consistently higher than the Bridge Condition Rating values. For example, in January, Water Supply Efficiency is 92 while Bridge Condition Rating is 78; in July, Water Supply Efficiency is 92 while Bridge Condition Rating is 85.\n\n3. **Factchecking_tail**:  \n   - Is Water Supply Efficiency consistently higher than Bridge Condition Rating: Based on the comparison in step 2, Water Supply Efficiency is indeed consistently higher than Bridge Condition Rating throughout the entire period from January to July.\n\nThe final answer is True. The statement \&quot;the Water Supply Efficiency has been consistently higher than the Bridge Condition Rating throughout the year\&quot; is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4083,53 +4118,6 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">78.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000088_column2.png" alt="row000088_column2.png" />
-  </td>
-  <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">2</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;If the Power Grid Reliability increases by 5 points from January, what is the difference between the new value and the Water Supply Efficiency in April, rounded to the nearest 5?&quot;,
-  &quot;Answer&quot;: &quot;5&quot;,
-  &quot;Cleaned_answer&quot;: &quot;5&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What was the Power Grid Reliability in January?&quot;,
-    &quot;Answer&quot;: &quot;95&quot;,
-    &quot;Cleaned_answer&quot;: &quot;95&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the Water Supply Efficiency in April?&quot;,
-    &quot;Answer&quot;: &quot;95&quot;,
-    &quot;Cleaned_answer&quot;: &quot;93&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the new value after increasing the Power Grid Reliability from January by 5 points?&quot;,
-    &quot;Answer&quot;: &quot;100&quot;,
-    &quot;Cleaned_answer&quot;: &quot;100&quot;,
-    &quot;Subquestion_type&quot;: &quot;calculation_1&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the rounded difference to the nearest 5 between the new value of Power Grid Reliability after increasing it by 5 points from its January value and the Water Supply Efficiency in April?&quot;,
-    &quot;Answer&quot;: &quot;unanswerable&quot;,
-    &quot;Cleaned_answer&quot;: &quot;5&quot;,
-    &quot;Subquestion_type&quot;: &quot;calculation_tail&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">78.png</pre>
-  </td>
-  <td class="table0_td_column2">
     <img class="table0_column_column2" src="assets/table0/row000089_column2.png" alt="row000089_column2.png" />
   </td>
   <td class="table0_td_column3">
@@ -4140,7 +4128,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is the correct answer to the following question: if the Road Quality Index in January is used as a baseline, what is the percentage change in the Bridge Condition Rating in May compared to the baseline?&quot;,
   &quot;Answer&quot;: &quot;c) 3.7%&quot;,
   &quot;Cleaned_answer&quot;: &quot;-5&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Road Quality Index in January&#x27;, &#x27;Bridge Condition Rating in May&#x27;]\n   - Road Quality Index in January: 87\n   - Bridge Condition Rating in May: 83\n\n2. calculation_simple: [&#x27;Percentage change from Road Quality Index in January to Bridge Condition Rating in May&#x27;]\n   - Percentage change calculation: ((83 - 87) / 87) * 100 \u2248 -4.59%\n\nThe final answer is -4.59%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4162,10 +4150,57 @@ function frameMove(elem, offset) {
 </tr>
 <tr>
   <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">80.png</pre>
+    <pre class="table0_column_column1" style="">78.png</pre>
   </td>
   <td class="table0_td_column2">
     <img class="table0_column_column2" src="assets/table0/row000090_column2.png" alt="row000090_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3" style="">4</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4" style="">{
+  &quot;ComplexQ&quot;: &quot;What is the difference between the Water Supply Efficiency in March and the Power Grid Reliability in May, rounded to the nearest integer?&quot;,
+  &quot;Answer&quot;: &quot;2&quot;,
+  &quot;Cleaned_answer&quot;: &quot;3&quot;,
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Water Supply Efficiency in March&#x27;, &#x27;Power Grid Reliability in May&#x27;]\n   - Water Supply Efficiency in March is 95.\n   - Power Grid Reliability in May is 98.\n\n2. calculation_1: [&#x27;difference between the two values&#x27;]\n   - Difference = 98 - 95 = 3.\n\n3. rounding_tail: [&#x27;result to the nearest integer&#x27;]\n   - The result is already an integer, so no further rounding is needed.\n\nThe final answer is 3.&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5" style="">[
+  {
+    &quot;Question&quot;: &quot;What is the Water Supply Efficiency in March?&quot;,
+    &quot;Answer&quot;: &quot;94&quot;,
+    &quot;Cleaned_answer&quot;: &quot;95&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the reliability of the power grid in May?&quot;,
+    &quot;Answer&quot;: &quot;98&quot;,
+    &quot;Cleaned_answer&quot;: &quot;98&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the difference between the Water Supply Efficiency in March and the reliability of the power grid in May?&quot;,
+    &quot;Answer&quot;: &quot;3&quot;,
+    &quot;Cleaned_answer&quot;: &quot;3&quot;,
+    &quot;Subquestion_type&quot;: &quot;calculation_1&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the result rounded to the nearest integer?&quot;,
+    &quot;Answer&quot;: &quot;unanswerable&quot;,
+    &quot;Cleaned_answer&quot;: &quot;3&quot;,
+    &quot;Subquestion_type&quot;: &quot;rounding_tail&quot;
+  }
+]</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
+    <pre class="table0_column_column1" style="">80.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000091_column2.png" alt="row000091_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -4175,7 +4210,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Will the increased value of Water_Management surpass the value of Urban_Planning at Index 2?&quot;,
   &quot;Answer&quot;: &quot;No&quot;,
   &quot;Cleaned_answer&quot;: &quot;No&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the value of WaterManagement at Index 2: From the data, the value of Water_Management at Index 2 is 1700.\n2. Identify the value of UrbanPlanning at Index 2: From the data, the value of Urban_Planning at Index 2 is 2000.\n3. Compare the WaterManagement value and UrbanPlanning value at Index 2: 1700 (Water_Management) is less than 2000 (Urban_Planning).\n4. Determine if the increased value of Water_Management surpasses the value of Urban_Planning at Index 2: Since 1700 is less than 2000, the value of Water_Management does not surpass the value of Urban_Planning at Index 2.\n\nThe final answer is No.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4206,7 +4241,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">80.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000091_column2.png" alt="row000091_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000092_column2.png" alt="row000092_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -4216,7 +4251,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Will the doubled value of Eco_Tech exceed the sum of Food_Security and Energy_Efficiency at Index 1?&quot;,
   &quot;Answer&quot;: &quot;No&quot;,
   &quot;Cleaned_answer&quot;: &quot;No&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;EcoTech value at Index 1&#x27; is 1600, &#x27;FoodSecurity value at Index 1&#x27; is 1800, &#x27;EnergyEfficiency value at Index 1&#x27; is 1400]\n\n2. calculation_1: [&#x27;Double the EcoTech value&#x27; is 2 * 1600 = 3200]\n\n3. calculation_2: [&#x27;Sum of FoodSecurity and EnergyEfficiency values&#x27; is 1800 + 1400 = 3200]\n\n4. compare_tail: [&#x27;Double EcoTech vs sum of FoodSecurity and EnergyEfficiency&#x27; is 3200 == 3200]\n\nThe final answer is No, the doubled value of Eco_Tech does not exceed the sum of Food_Security and Energy_Efficiency at Index 1; they are equal.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4265,7 +4300,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">82.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000092_column2.png" alt="row000092_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000093_column2.png" alt="row000093_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -4275,7 +4310,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Will the sum of Accuracy and Resolution exceed the value of Linearity?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Accuracy value&#x27;: 80, &#x27;Resolution value&#x27;: 60, &#x27;Linearity value&#x27;: 90]\n2. calculation_1: [&#x27;sum of Accuracy and Resolution&#x27;: 80 + 60 = 140]\n3. compare_tail: [&#x27;sum vs Linearity value&#x27;: 140 &gt; 90]\n\nThe final answer is Yes, the sum of Accuracy and Resolution (140) will exceed the value of Linearity (90).&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4312,7 +4347,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">82.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000093_column2.png" alt="row000093_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000094_column2.png" alt="row000094_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -4322,7 +4357,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is greater, the ratio of Sensitivity to Quantum Efficiency or 0.9?&quot;,
   &quot;Answer&quot;: &quot;0.9&quot;,
   &quot;Cleaned_answer&quot;: &quot;0.9&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Sensitivity value&#x27;: 75, &#x27;Quantum Efficiency value&#x27;: 85]\n\n2. calculation_1: [&#x27;ratio of Sensitivity to Quantum Efficiency&#x27;] = 75 / 85 \u2248 0.8824\n\n3. compare_tail: [&#x27;ratio vs 0.9&#x27;] = 0.8824 &lt; 0.9\n\nThe final answer is that 0.9 is greater than the ratio of Sensitivity to Quantum Efficiency.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4359,7 +4394,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">82.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000094_column2.png" alt="row000094_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000095_column2.png" alt="row000095_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -4369,7 +4404,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is closer to 85, the average of Linearity and Quantum Efficiency or their difference?&quot;,
   &quot;Answer&quot;: &quot;Average&quot;,
   &quot;Cleaned_answer&quot;: &quot;Average&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n\n1. identification: value of Linearity is 90, value of Quantum Efficiency is 85\n\n2. calculation_1: average of Linearity (90) and Quantum Efficiency (85) is (90 + 85) / 2 = 87.5\n\n3. calculation_2: difference between Linearity (90) and Quantum Efficiency (85) is |90 - 85| = 5\n\n4. compare_tail: comparing 87.5 and 5 to 85, 87.5 is closer to 85 than 5\n\nThe final answer is the average of Linearity and Quantum Efficiency (87.5) is closer to 85.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4412,7 +4447,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">86.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000095_column2.png" alt="row000095_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000096_column2.png" alt="row000096_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -4422,7 +4457,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the price of Soybeans in 2022 higher than the price of Corn in 2019?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n\n1. identification: [&#x27;price of Soybeans in 2022&#x27;, &#x27;price of Corn in 2019&#x27;]  \n   - Price of Soybeans in 2022: 410 USD  \n   - Price of Corn in 2019: 400 USD  \n\n2. compare_1: [&#x27;Soybeans 2022  Corn 2019&#x27;]  \n   - Comparing the prices: 410 USD (Soybeans 2022) &gt; 400 USD (Corn 2019)  \n\n3. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;]  \n   - Based on the comparison, the statement \&quot;the price of Soybeans in 2022 is higher than the price of Corn in 2019\&quot; is true.  \n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4459,7 +4494,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">86.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000096_column2.png" alt="row000096_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000097_column2.png" alt="row000097_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -4469,7 +4504,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;If the price of Corn in 2020 increased by 15%, what is the new price?&quot;,
   &quot;Answer&quot;: &quot;a) $483&quot;,
   &quot;Cleaned_answer&quot;: &quot;483&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;price of Corn in 2020&#x27;]  \n   From the data provided in the code, the price of Corn in 2020 is 420 USD.\n\n2. calculation_simple: [&#x27;new price after 15% increase&#x27;]  \n   To calculate the new price after a 15% increase:  \n   New Price = Original Price + (Original Price * 0.15)  \n   New Price = 420 + (420 * 0.15)  \n   New Price = 420 + 63  \n   New Price = 483\n\nThe final answer is 483.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4494,7 +4529,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">86.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000097_column2.png" alt="row000097_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000098_column2.png" alt="row000098_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -4504,7 +4539,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between the price of Corn in 2021 and the price of Soybeans in 2019?&quot;,
   &quot;Answer&quot;: &quot;$100&quot;,
   &quot;Cleaned_answer&quot;: &quot;100&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;price of Corn in 2021&#x27; is 450 USD, &#x27;price of Soybeans in 2019&#x27; is 350 USD]  \n2. calculation_simple: [&#x27;difference between the two prices&#x27; is 450 - 350 = 100 USD]  \n\nThe final answer is 100 USD.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4535,7 +4570,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">87.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000098_column2.png" alt="row000098_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000099_column2.png" alt="row000099_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -4545,7 +4580,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False? The difference between the peak value of Research Papers Published and the peak value of Conferences Attended is greater than 15?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification:  \n   - peak value of Research Papers Published: 22 (in April)  \n   - peak value of Conferences Attended: 5 (in April)\n\n2. compare_1:  \n   - difference between peak values: 22 - 5 = 17  \n\n3. factchecking_tail:  \n   - Given the finding from the previous step is the statement true: Since 17 &gt; 15, the statement is true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4582,7 +4617,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">87.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000099_column2.png" alt="row000099_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000100_column2.png" alt="row000100_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -4592,7 +4627,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the average count of Research Papers Published from January to May?&quot;,
   &quot;Answer&quot;: &quot;18.4&quot;,
   &quot;Cleaned_answer&quot;: &quot;18.4&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;Research Papers Published count for January February March April May&#x27;]  \n   - Research Papers Published count for January: 15  \n   - Research Papers Published count for February: 20  \n   - Research Papers Published count for March: 18  \n   - Research Papers Published count for April: 22  \n   - Research Papers Published count for May: 17  \n\n2. calculation_simple: [&#x27;average count of Research Papers Published from January to May&#x27;]  \n   - Sum of counts: 15 + 20 + 18 + 22 + 17 = 92  \n   - Number of months: 5  \n   - Average count: 92 / 5 = 18.4  \n\nThe final answer is 18.4.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4617,7 +4652,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">88.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000100_column2.png" alt="row000100_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000101_column2.png" alt="row000101_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -4627,7 +4662,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the difference between ClusterUtilization and JobCompletionRate as a percentage, rounded to the nearest integer?&quot;,
   &quot;Answer&quot;: &quot;5&quot;,
   &quot;Cleaned_answer&quot;: &quot;5&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;ClusterUtilization value&#x27; is 85, &#x27;JobCompletionRate value&#x27; is 90]\n\n2. calculation_1: [&#x27;difference between ClusterUtilization and JobCompletionRate&#x27; is 90 - 85 = 5]\n\n3. rounding_tail: [&#x27;round the result to the nearest integer&#x27; results in 5]\n\nThe final answer is 5.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4664,7 +4699,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">88.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000101_column2.png" alt="row000101_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000102_column2.png" alt="row000102_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -4674,7 +4709,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the result of multiplying the ratio of NodeFailureRate to ParallelEfficiency by 100, rounded to the nearest integer?&quot;,
   &quot;Answer&quot;: &quot;7&quot;,
   &quot;Cleaned_answer&quot;: &quot;7&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the percentage for NodeFailureRate from the chart: 5%  \n   identify the percentage for ParallelEfficiency from the chart: 75%\n\n2. calculate the ratio of NodeFailureRate to ParallelEfficiency: 5 / 75 = 0.0666...\n\n3. multiply the ratio by 100: 0.0666... * 100 = 6.66...\n\n4. round the result to the nearest integer: 7  \n\nThe final answer is 7.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4717,7 +4752,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">88.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000102_column2.png" alt="row000102_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000103_column2.png" alt="row000103_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">2</div>
@@ -4727,7 +4762,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the result of subtracting NodeFailureRate from the sum of ClusterUtilization and JobCompletionRate?&quot;,
   &quot;Answer&quot;: &quot;170%&quot;,
   &quot;Cleaned_answer&quot;: &quot;170&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identify the value of ClusterUtilization: 85\n2. identify the value of JobCompletionRate: 90\n3. identify the value of NodeFailureRate: 5\n4. calculate the sum of ClusterUtilization and JobCompletionRate: 85 + 90 = 175\n5. determine the result of subtracting NodeFailureRate from the sum of ClusterUtilization and JobCompletionRate: 175 - 5 = 170\nThe final answer is 170.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4770,7 +4805,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">88.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000103_column2.png" alt="row000103_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000104_column2.png" alt="row000104_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">3</div>
@@ -4780,7 +4815,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False: The sum of ParallelEfficiency and ClusterUtilization is greater than JobCompletionRate?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. identification: [&#x27;value of ParallelEfficiency&#x27;: 75, &#x27;value of ClusterUtilization&#x27;: 85, &#x27;value of JobCompletionRate&#x27;: 90]  \n2. calculation_1: [&#x27;sum of ParallelEfficiency and ClusterUtilization&#x27;: 75 + 85 = 160]  \n3. compare_2: [&#x27;sum vs JobCompletionRate&#x27;: 160 &gt; 90, so the sum is greater than JobCompletionRate]  \n4. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;: The statement is true as 160 is indeed greater than 90]  \nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4826,92 +4861,10 @@ function frameMove(elem, offset) {
 </tr>
 <tr>
   <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">89.png</pre>
-  </td>
-  <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000104_column2.png" alt="row000104_column2.png" />
-  </td>
-  <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">0</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;What would be the projected value for Culture if the trend from Rituals to Culture continued linearly, given the positions of Culture, Rituals, and Kinship?&quot;,
-  &quot;Answer&quot;: &quot;Outermost point&quot;,
-  &quot;Cleaned_answer&quot;: &quot;75&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What are the positions of Culture, Rituals, and Kinship on the chart?&quot;,
-    &quot;Answer&quot;: &quot;Culture, Rituals, and Kinship are all connected by a red polygon that shows their relative importance in the context of Beliefs and Language.&quot;,
-    &quot;Cleaned_answer&quot;: &quot;Culture, Rituals, and Kinship are all connected by a red shape that shows their relative importance in the context of Beliefs and Language&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the linear trend observed between Rituals and Culture on the chart?&quot;,
-    &quot;Answer&quot;: &quot;unanswerable&quot;,
-    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
-    &quot;Subquestion_type&quot;: &quot;calculation_1&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the value for Culture based on the calculated trend?&quot;,
-    &quot;Answer&quot;: &quot;unanswerable&quot;,
-    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
-    &quot;Subquestion_type&quot;: &quot;projection_tail&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">89.png</pre>
-  </td>
-  <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000105_column2.png" alt="row000105_column2.png" />
-  </td>
-  <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">2</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;If Culture&#x27;s distance was reduced by half, what would be the difference between Culture&#x27;s new distance and Rituals&#x27; distance, given the relative distances of Culture, Rituals, and Kinship, where fewer than two are shorter than Language&#x27;s distance?&quot;,
-  &quot;Answer&quot;: &quot;Approximately half the original distance&quot;,
-  &quot;Cleaned_answer&quot;: &quot;48&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What is the value for Cultures original distance?&quot;,
-    &quot;Answer&quot;: &quot;unanswerable&quot;,
-    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What does the chart indicate about rituals distance?&quot;,
-    &quot;Answer&quot;: &quot;unanswerable&quot;,
-    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;Are fewer than two among Culture Rituals and Kinship distances shorter than the Language distance?&quot;,
-    &quot;Answer&quot;: &quot;unanswerable&quot;,
-    &quot;Cleaned_answer&quot;: &quot;unanswerable&quot;,
-    &quot;Subquestion_type&quot;: &quot;compare_tail&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
     <pre class="table0_column_column1" style="">91.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000106_column2.png" alt="row000106_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000105_column2.png" alt="row000105_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -4921,7 +4874,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;What is the result of the difference in percentage between Retail and Real Estate?&quot;,
   &quot;Answer&quot;: &quot;6.1%&quot;,
   &quot;Cleaned_answer&quot;: &quot;6.1&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;percentage of Retail&#x27; = 9.8%, &#x27;percentage of Real Estate&#x27; = 15.9%]\n\n2. calculation_simple: [&#x27;difference between the two percentages&#x27; = 15.9% - 9.8% = 6.1%]\n\nThe final answer is 6.1%.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -4952,42 +4905,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">91.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000107_column2.png" alt="row000107_column2.png" />
-  </td>
-  <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">3</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;If the percentage for Retail decreases by 2%, what is the difference between the new percentage for Retail and Real Estate?&quot;,
-  &quot;Answer&quot;: &quot;c) 8.5%&quot;,
-  &quot;Cleaned_answer&quot;: &quot;8.1&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What is the current percentage for Retail?&quot;,
-    &quot;Answer&quot;: &quot;9.8%&quot;,
-    &quot;Cleaned_answer&quot;: &quot;9.8&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
-  },
-  {
-    &quot;Question&quot;: &quot;What is the new percentage for Retail after decreasing by 2?&quot;,
-    &quot;Answer&quot;: &quot;7.8&quot;,
-    &quot;Cleaned_answer&quot;: &quot;7.8&quot;,
-    &quot;Subquestion_type&quot;: &quot;calculation_1&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">91.png</pre>
-  </td>
-  <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000108_column2.png" alt="row000108_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000106_column2.png" alt="row000106_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">4</div>
@@ -4997,7 +4915,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the following statement True or False? The sum of percentages for Technology and Finance is greater than the sum of percentages for Agriculture and Retail.&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the percentage for each industry:  \n   - Percentage of Technology: 20.7%  \n   - Percentage of Finance: 23.2%  \n   - Percentage of Agriculture: 12.2%  \n   - Percentage of Retail: 9.8%\n\n2. Calculate the sum of percentages for Technology and Finance:  \n   - Sum of Technology and Finance: 20.7% + 23.2% = 43.9%\n\n3. Calculate the sum of percentages for Agriculture and Retail:  \n   - Sum of Agriculture and Retail: 12.2% + 9.8% = 22.0%\n\n4. Compare the sum of Technology and Finance with the sum of Agriculture and Retail:  \n   - 43.9% (Technology and Finance) &gt; 22.0% (Agriculture and Retail)\n\n5. Fact-check if the statement is true based on the comparison:  \n   - The statement \&quot;The sum of percentages for Technology and Finance is greater than the sum of percentages for Agriculture and Retail\&quot; is true.\n\nThe final answer is True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -5058,7 +4976,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">92.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000109_column2.png" alt="row000109_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000107_column2.png" alt="row000107_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -5068,7 +4986,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement True or False: The difference between Category 3 in Metric1 and Metric3 is greater than 300?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;False&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;value of Category 3 in Metric1&#x27;, &#x27;value of Category 3 in Metric3&#x27;]\n   - value of Category 3 in Metric1: 450\n   - value of Category 3 in Metric3: 490\n\n2. calculation_1: [&#x27;difference between these two values&#x27;]\n   - difference between these two values: 490 - 450 = 40\n\n3. compare_2: [&#x27;is the difference 300&#x27;]\n   - is the difference 300: No, the difference is 40 which is not equal to 300\n\n4. factchecking_tail: [&#x27;Given the finding from the previous step is the statement true&#x27;]\n   - Given the difference is 40, the statement \&quot;The difference between Category 3 in Metric1 and Metric3 is greater than 300\&quot; is false\n\nThe final answer is False.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -5111,7 +5029,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">93.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000110_column2.png" alt="row000110_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000108_column2.png" alt="row000108_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -5121,7 +5039,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the difference between the Min Value of Blood Pressure and the Median Value of Cholesterol greater than 20?&quot;,
   &quot;Answer&quot;: &quot;False&quot;,
   &quot;Cleaned_answer&quot;: &quot;Yes&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the Min Value of Blood Pressure and the Median Value of Cholesterol from the data list:\n   - Min Value of Blood Pressure: 90\n   - Median Value of Cholesterol: 200\n\n2. Calculate the difference between the Min Value of Blood Pressure and the Median Value of Cholesterol:\n   - Difference = 200 - 90 = 110\n\n3. Compare the calculated difference with 20:\n   - 110 &gt; 20\n\nThe final answer is Yes, the difference between the Min Value of Blood Pressure and the Median Value of Cholesterol is greater than 20.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -5158,7 +5076,7 @@ function frameMove(elem, offset) {
     <pre class="table0_column_column1" style="">93.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000111_column2.png" alt="row000111_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000109_column2.png" alt="row000109_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">1</div>
@@ -5168,7 +5086,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Which is the correct answer to the following question: is the Min Value of Heart Rate less than the Median Value of Body Temperature? a) True, b) False, c) Cannot be determined, d) None of the above&quot;,
   &quot;Answer&quot;: &quot;a) True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:  \n1. Identify the Min Value of Heart Rate and Median Value of Body Temperature from the data:  \n   - The Min Value of Heart Rate is 50.  \n   - The Median Value of Body Temperature is 98.  \n\n2. Compare the Min Value of Heart Rate with the Median Value of Body Temperature:  \n   - 50 (Min Value of Heart Rate) is indeed less than 98 (Median Value of Body Temperature).  \n\n3. Fact-check if the statement \&quot;The Min Value of Heart Rate is less than the Median Value of Body Temperature\&quot; is true based on the comparison:  \n   - The statement is true according to the values identified.  \n\nThe final answer is a) True.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -5196,10 +5114,51 @@ function frameMove(elem, offset) {
 </tr>
 <tr>
   <td class="table0_td_column1">
+    <pre class="table0_column_column1" style="">96.png</pre>
+  </td>
+  <td class="table0_td_column2">
+    <img class="table0_column_column2" src="assets/table0/row000110_column2.png" alt="row000110_column2.png" />
+  </td>
+  <td class="table0_td_column3">
+    <div class="table0_column_column3" style="">0</div>
+  </td>
+  <td class="table0_td_column4">
+    <pre class="table0_column_column4" style="">{
+  &quot;ComplexQ&quot;: &quot;What is the difference between the median values of the Latino and Asian groups as a percentage of the Arab group\u2019s median value?&quot;,
+  &quot;Answer&quot;: &quot;15.38%&quot;,
+  &quot;Cleaned_answer&quot;: &quot;15.38&quot;,
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. Identify the median value of the Latino group: The median value for the Latino group is approximately 600.\n2. Identify the median value of the Asian group: The median value for the Asian group is approximately 500.\n3. Identify the median value of the Arab group: The median value for the Arab group is approximately 650.\n4. Calculate the difference between the Latino and Asian medians: 600 - 500 = 100.\n5. Express this difference as a percentage of the Arab group&#x27;s median: (100 / 650) * 100 \u2248 15.38%.\n\nThe final answer is 15.38%.&quot;
+}</pre>
+  </td>
+  <td class="table0_td_column5">
+    <pre class="table0_column_column5" style="">[
+  {
+    &quot;Question&quot;: &quot;What is the median value of the Latino group?&quot;,
+    &quot;Answer&quot;: &quot;600&quot;,
+    &quot;Cleaned_answer&quot;: &quot;600&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the median value of the Asian group?&quot;,
+    &quot;Answer&quot;: &quot;500&quot;,
+    &quot;Cleaned_answer&quot;: &quot;500&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  },
+  {
+    &quot;Question&quot;: &quot;What is the median value of the Arab group?&quot;,
+    &quot;Answer&quot;: &quot;600&quot;,
+    &quot;Cleaned_answer&quot;: &quot;550&quot;,
+    &quot;Subquestion_type&quot;: &quot;identification&quot;
+  }
+]</pre>
+  </td>
+</tr>
+<tr>
+  <td class="table0_td_column1">
     <pre class="table0_column_column1" style="">98.png</pre>
   </td>
   <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000112_column2.png" alt="row000112_column2.png" />
+    <img class="table0_column_column2" src="assets/table0/row000111_column2.png" alt="row000111_column2.png" />
   </td>
   <td class="table0_td_column3">
     <div class="table0_column_column3" style="">0</div>
@@ -5209,7 +5168,7 @@ function frameMove(elem, offset) {
   &quot;ComplexQ&quot;: &quot;Is the statement true that swapping the initial values of Technology and Employment reverses the difference between them?&quot;,
   &quot;Answer&quot;: &quot;True&quot;,
   &quot;Cleaned_answer&quot;: &quot;True&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
+  &quot;CoT&quot;: &quot;To answer this question, let&#x27;s break it down step by step:\n\n1. identification: [&#x27;initial values of Technology and Employment&#x27;]  \n   From the data, the initial value of Technology is 95 and the initial value of Employment is 85.\n\n2. compare_1: [&#x27;difference between initial values of Technology and Employment&#x27;]  \n   The difference between the initial values of Technology (95) and Employment (85) is 95 - 85 = 10.\n\n3. calculation_2: [&#x27;swapping the initial values&#x27;]  \n   After swapping, the initial value of Technology becomes 85 and the initial value of Employment becomes 95.\n\n4. compare_3: [&#x27;new difference after swapping&#x27;]  \n   The new difference between the swapped values is 85 - 95 = -10.\n\n5. factchecking_tail: [&#x27;Does the new difference reverse the original difference&#x27;]  \n   The original difference was 10, and the new difference after swapping is -10, which is indeed the reverse of the original difference.\n\nThe final answer is True; the statement that swapping the initial values of Technology and Employment reverses the difference between them is correct.&quot;
 }</pre>
   </td>
   <td class="table0_td_column5">
@@ -5243,35 +5202,6 @@ function frameMove(elem, offset) {
     &quot;Answer&quot;: &quot;Yes&quot;,
     &quot;Cleaned_answer&quot;: &quot;Yes&quot;,
     &quot;Subquestion_type&quot;: &quot;factchecking_tail&quot;
-  }
-]</pre>
-  </td>
-</tr>
-<tr>
-  <td class="table0_td_column1">
-    <pre class="table0_column_column1" style="">98.png</pre>
-  </td>
-  <td class="table0_td_column2">
-    <img class="table0_column_column2" src="assets/table0/row000113_column2.png" alt="row000113_column2.png" />
-  </td>
-  <td class="table0_td_column3">
-    <div class="table0_column_column3" style="">1</div>
-  </td>
-  <td class="table0_td_column4">
-    <pre class="table0_column_column4" style="">{
-  &quot;ComplexQ&quot;: &quot;If the change in Safety is applied to the final value of Housing, what is the new value of Housing?&quot;,
-  &quot;Answer&quot;: &quot;d) 90&quot;,
-  &quot;Cleaned_answer&quot;: &quot;90&quot;,
-  &quot;CoT&quot;: &quot;&lt;1&gt;&quot;
-}</pre>
-  </td>
-  <td class="table0_td_column5">
-    <pre class="table0_column_column5" style="">[
-  {
-    &quot;Question&quot;: &quot;What is the change in Safety?&quot;,
-    &quot;Answer&quot;: &quot;-10.00&quot;,
-    &quot;Cleaned_answer&quot;: &quot;10&quot;,
-    &quot;Subquestion_type&quot;: &quot;identification&quot;
   }
 ]</pre>
   </td>
